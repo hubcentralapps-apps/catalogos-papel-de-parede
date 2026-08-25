@@ -37,17 +37,25 @@ jobs:
             done
           fi
       - run: python scripts/build_library_v2.py
-      - run: python scripts/build_wiler.py
-      - name: Commit generated library
+      - name: Commit Home Finish and Kantai library
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A imagens dados staging
+          git add -A imagens/home-finish imagens/kantai dados/biblioteca-imagens.json staging || true
           if git diff --cached --quiet; then
-            echo "No generated changes"
+            echo "No Home Finish/Kantai changes"
           else
-            git commit -m "Build image library for reviewed collections"
+            git commit -m "Build Home Finish and Kantai image library"
             git push
           fi
-
-# Trigger rebuild after loading reviewed collections.
+      - run: python scripts/build_wiler.py
+      - name: Commit Wiler library
+        run: |
+          git pull --rebase
+          git add -A imagens/wiler dados/biblioteca-imagens.json staging || true
+          if git diff --cached --quiet; then
+            echo "No Wiler changes"
+          else
+            git commit -m "Build Wiler image library"
+            git push
+          fi
