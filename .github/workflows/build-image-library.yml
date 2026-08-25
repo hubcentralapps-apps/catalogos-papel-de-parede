@@ -53,7 +53,6 @@ jobs:
       - run: python scripts/build_wiler.py
       - name: Commit Wiler library
         run: |
-          git pull --rebase
           if [ -d imagens/wiler ]; then git add -A imagens/wiler; fi
           git add -A dados/biblioteca-imagens.json
           if [ -d staging ]; then git add -A staging; fi
