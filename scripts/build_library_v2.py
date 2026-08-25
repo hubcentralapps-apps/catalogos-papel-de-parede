@@ -4,19 +4,23 @@ from pathlib import Path
 from urllib.parse import urljoin, quote
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, ImageStat
 
 ROOT=Path(__file__).resolve().parents[1]
 DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'
 TIMEOUT=35
-UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/7.0)'
+UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/8.0)'
 HF_MAP_DIR=ROOT/'dados'/'home-finish-urls'
+
+# Referencias apontadas na validacao visual do catalogo.
+HF_FORCE_DISCOVER={'101012','101013','101015','101031','101037'}
+HF_ROTATE_180={'201020','201021'}
 
 def normalize_collection(data):
     if data.get('records'): return data['records']
     vendor=data.get('fornecedor'); col=data.get('colecao'); slug=data.get('slug')
-    return [{'f':vendor,'c':col,'s':slug,'r':item.get('r') or item.get('referencia'),'u':item.get('u')} for item in data.get('itens',[])]
+    return [{'f':vendor,'c':col,'s':slug,'r':item.get('r') or item.get('referencia'),'u':item.get('u'),'crop':item.get('crop') or data.get('crop_default')} for item in data.get('itens',[])]
 
 def load_records():
     records=[]
@@ -60,13 +64,18 @@ def fetch_image(session,url):
         r=session.get(url,timeout=TIMEOUT,allow_redirects=True)
         return decode_image_response(r)
     except Exception:
-        # Home Finish bloqueia alguns IPs de datacenter. O proxy é usado somente
-        # durante a montagem da biblioteca; o catálogo final continua 100% local.
         if 'homefinish.com.br/' not in url: raise
         u=url.split('://',1)[-1]
         proxied='https://images.weserv.nl/?url='+quote(u,safe='/:?=&%')
         r=session.get(proxied,timeout=TIMEOUT,allow_redirects=True)
         return decode_image_response(r)
+
+def image_is_blank(im):
+    small=ImageOps.fit(im.convert('RGB'),(96,96),method=Image.Resampling.BILINEAR)
+    stat=ImageStat.Stat(small)
+    means=stat.mean; stds=stat.stddev
+    # Rejeita arquivo praticamente branco/vazio, como ocorreu na referencia 84858.
+    return sum(means)/3 > 242 and max(stds) < 9
 
 def media_urls(text,ref,base_url='https://www.homefinish.com.br/'):
     txt=html.unescape(text).replace('\\/','/')
@@ -83,7 +92,7 @@ def media_urls(text,ref,base_url='https://www.homefinish.com.br/'):
             if lookup not in u: continue
             if any(x in low for x in ('watermark','marca-dagua','marca_dagua','logo','cropped-','inverted')): continue
             urls.append(u)
-    return sorted(dict.fromkeys(urls),key=lambda u:(0 if 'wp-content/uploads' in u else 1,0 if 'papel-parede' in u.lower() else 1,len(u)))
+    return sorted(dict.fromkeys(urls),key=lambda u:(0 if 'sem-marca' in u.lower() else 1,0 if 'wp-content/uploads' in u else 1,0 if 'papel-parede' in u.lower() else 1,len(u)))
 
 def candidate_pages(ref):
     lookup=normalize_ref(ref)
@@ -95,7 +104,6 @@ def candidate_pages(ref):
     ]
 
 def discover_hf_official(session,ref):
-    # 1) página oficial direta
     for page in candidate_pages(ref):
         try:
             r=session.get(page,timeout=TIMEOUT,allow_redirects=True)
@@ -103,10 +111,9 @@ def discover_hf_official(session,ref):
                 for u in media_urls(r.text,ref,r.url):
                     try:
                         im=fetch_image(session,u); w,h=im.size
-                        if min(w,h)>=500 and max(w,h)>=700: return u,im
+                        if not image_is_blank(im) and min(w,h)>=500 and max(w,h)>=700: return u,im
                     except Exception: pass
         except Exception: pass
-    # 2) Jina Reader como ponte de leitura para páginas bloqueadas a datacenters.
     for page in candidate_pages(ref):
         try:
             jr='https://r.jina.ai/'+page
@@ -115,10 +122,21 @@ def discover_hf_official(session,ref):
             for u in media_urls(r.text,ref,page):
                 try:
                     im=fetch_image(session,u); w,h=im.size
-                    if min(w,h)>=500 and max(w,h)>=700: return u,im
+                    if not image_is_blank(im) and min(w,h)>=500 and max(w,h)>=700: return u,im
                 except Exception: pass
         except Exception: pass
     return None,None
+
+def apply_known_corrections(vendor,ref,rec,im):
+    norm=normalize_ref(ref)
+    if vendor=='Kantai' and rec.get('crop') in {'top-half','kt'}:
+        w,h=im.size
+        # As imagens oficiais da Kantai trazem a marca na metade inferior.
+        # Mantemos somente a amostra limpa, como no construtor anterior.
+        im=im.crop((0,0,w,h//2))
+    if vendor=='Home Finish' and norm in HF_ROTATE_180:
+        im=im.rotate(180,expand=False)
+    return im
 
 def save_pair(im,base,ref):
     od=base/'originals'; td=base/'thumbnails'; od.mkdir(parents=True,exist_ok=True); td.mkdir(parents=True,exist_ok=True)
@@ -132,9 +150,11 @@ def fetch_one(rec):
     session=requests.Session(); session.headers.update({'User-Agent':UA,'Accept':'text/html,application/xhtml+xml,image/avif,image/webp,image/apng,*/*;q=0.8'})
     try:
         if vendor=='Home Finish':
-            key=f'{col}|{normalize_ref(ref)}'; entry=HF_MAP.get(key); source=(entry or {}).get('url'); im=None
-            if source and source.startswith(('http://','https://')):
-                try: im=fetch_image(session,source)
+            norm=normalize_ref(ref); key=f'{col}|{norm}'; entry=HF_MAP.get(key); source=(entry or {}).get('url'); im=None
+            if norm not in HF_FORCE_DISCOVER and source and source.startswith(('http://','https://')):
+                try:
+                    im=fetch_image(session,source)
+                    if image_is_blank(im): im=None
                 except Exception: im=None
             if im is None: source,im=discover_hf_official(session,ref)
             if im is None or not source: raise ValueError('clean-hf-source-not-found')
@@ -142,7 +162,9 @@ def fetch_one(rec):
             source=normalize_wix_url(rec.get('u'))
             if not source: raise ValueError('kantai-source-missing')
             im=fetch_image(session,source)
+        im=apply_known_corrections(vendor,ref,rec,im)
         w,h=im.size
+        if image_is_blank(im): raise ValueError('blank-image-rejected')
         if min(w,h)<500 or max(w,h)<700: raise ValueError(f'low-resolution-{w}x{h}')
         op,tp=save_pair(im,base,ref)
         return 'ready',{**rec,'source_resolved':source,'original':str(op.relative_to(ROOT)),'thumbnail':str(tp.relative_to(ROOT)),'width':w,'height':h,'status':'ready'}
