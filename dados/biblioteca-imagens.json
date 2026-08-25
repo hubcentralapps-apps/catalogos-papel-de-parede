@@ -1,6 +1,6 @@
 {
-  "ready": 171,
-  "failed": 641,
+  "ready": 180,
+  "failed": 632,
   "items": [
     {
       "f": "Home Finish",
@@ -142,6 +142,18 @@
       "source_resolved": "https://static.wixstatic.com/media/8e0c0d_59d568c41ec5470cb99eb18f6750a490~mv2.jpg",
       "original": "imagens/home-finish/bosque-da-imaginacao/originals/80690.jpg",
       "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/80690.jpg",
+      "width": 1080,
+      "height": 1080,
+      "status": "ready"
+    },
+    {
+      "f": "Home Finish",
+      "c": "Bosque da Imaginação",
+      "s": "bosque-da-imaginacao",
+      "r": "80706",
+      "source_resolved": "https://static.wixstatic.com/media/8e0c0d_efa75c4028344c1c8645907defd021af~mv2.jpg",
+      "original": "imagens/home-finish/bosque-da-imaginacao/originals/80706.jpg",
+      "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/80706.jpg",
       "width": 1080,
       "height": 1080,
       "status": "ready"
@@ -450,6 +462,18 @@
       "f": "Home Finish",
       "c": "Bosque da Imaginação",
       "s": "bosque-da-imaginacao",
+      "r": "81154",
+      "source_resolved": "https://cdn.awsli.com.br/1000x1000/2492/2492075/produto/272399778/papel-de-parede-bosque-da-imagina-o-81154-gsc2xd7mll.png",
+      "original": "imagens/home-finish/bosque-da-imaginacao/originals/81154.jpg",
+      "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/81154.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Home Finish",
+      "c": "Bosque da Imaginação",
+      "s": "bosque-da-imaginacao",
       "r": "81161",
       "source_resolved": "https://cdn.awsli.com.br/1000x1000/2492/2492075/produto/272397037/papel-de-parede-bosque-da-imagina-o-81161-b8lkz0a00m.png",
       "original": "imagens/home-finish/bosque-da-imaginacao/originals/81161.jpg",
@@ -560,6 +584,20 @@
       "f": "Kantai",
       "c": "Aditare 3",
       "s": "aditare-3",
+      "r": "AD300008R",
+      "u": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
+      "crop": "kt",
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
+      "original": "imagens/kantai/aditare-3/originals/AD300008R.jpg",
+      "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300008R.jpg",
+      "width": 1000,
+      "height": 500,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Aditare 3",
+      "s": "aditare-3",
       "r": "AD300009R",
       "u": "https://static.wixstatic.com/media/3a4455_567bbd3b62804c1895d9927f7ab4ebed~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_567bbd3b62804c1895d9927f7ab4ebed~mv2.jpg",
       "crop": "kt",
@@ -622,6 +660,20 @@
       "source_resolved": "https://static.wixstatic.com/media/3a4455_15a81e37f724405cb107fe8318f01fd1~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300604R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300604R.jpg",
+      "width": 1000,
+      "height": 500,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Aditare 3",
+      "s": "aditare-3",
+      "r": "AD300605R",
+      "u": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
+      "crop": "kt",
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
+      "original": "imagens/kantai/aditare-3/originals/AD300605R.jpg",
+      "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300605R.jpg",
       "width": 1000,
       "height": 500,
       "status": "ready"
@@ -938,6 +990,20 @@
       "f": "Kantai",
       "c": "Criativo 3",
       "s": "criativo-3",
+      "r": "CR333715R",
+      "u": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
+      "crop": "kt",
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
+      "original": "imagens/kantai/criativo-3/originals/CR333715R.jpg",
+      "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333715R.jpg",
+      "width": 1000,
+      "height": 500,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Criativo 3",
+      "s": "criativo-3",
       "r": "CR333716R",
       "u": "https://static.wixstatic.com/media/3a4455_de919123e64e4c549bbdf63376524bc5~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_de919123e64e4c549bbdf63376524bc5~mv2.jpg",
       "crop": "kt",
@@ -1154,6 +1220,20 @@
       "source_resolved": "https://static.wixstatic.com/media/3a4455_b28c47b6c2894ed4b48e9ee6966c3e30~mv2.jpg",
       "original": "imagens/kantai/poet-chart-5/originals/PT500704.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500704.jpg",
+      "width": 1000,
+      "height": 500,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Poet Chart 5",
+      "s": "poet-chart-5",
+      "r": "PT500705",
+      "u": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
+      "crop": "top-half",
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
+      "original": "imagens/kantai/poet-chart-5/originals/PT500705.jpg",
+      "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500705.jpg",
       "width": 1000,
       "height": 500,
       "status": "ready"
@@ -1414,6 +1494,20 @@
       "f": "Kantai",
       "c": "Poet Chart 5",
       "s": "poet-chart-5",
+      "r": "PT501101",
+      "u": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
+      "crop": "top-half",
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
+      "original": "imagens/kantai/poet-chart-5/originals/PT501101.jpg",
+      "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501101.jpg",
+      "width": 1000,
+      "height": 500,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Poet Chart 5",
+      "s": "poet-chart-5",
       "r": "PT501102",
       "u": "https://static.wixstatic.com/media/3a4455_c52bfddd973342ec92785431529d2425~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_c52bfddd973342ec92785431529d2425~mv2.jpg",
       "crop": "top-half",
@@ -1624,6 +1718,20 @@
       "f": "Kantai",
       "c": "Space IX",
       "s": "space-ix",
+      "r": "9S161008",
+      "u": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
+      "crop": null,
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
+      "original": "imagens/kantai/space-ix/originals/9S161008.jpg",
+      "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161008.jpg",
+      "width": 990,
+      "height": 990,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Space IX",
+      "s": "space-ix",
       "r": "9S161101",
       "u": "https://static.wixstatic.com/media/3a4455_c83d65b097354945933371e7ca0d34bc~mv2.jpg",
       "crop": null,
@@ -1686,6 +1794,20 @@
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7bf4cff40982401d941b39f108b99d56~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161201.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161201.jpg",
+      "width": 990,
+      "height": 990,
+      "status": "ready"
+    },
+    {
+      "f": "Kantai",
+      "c": "Space IX",
+      "s": "space-ix",
+      "r": "9S161202",
+      "u": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
+      "crop": null,
+      "source_resolved": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
+      "original": "imagens/kantai/space-ix/originals/9S161202.jpg",
+      "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161202.jpg",
       "width": 990,
       "height": 990,
       "status": "ready"
@@ -2967,22 +3089,6 @@
       "c": "Biomas",
       "s": "biomas",
       "r": "83530",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Bosque da Imaginação",
-      "s": "bosque-da-imaginacao",
-      "r": "80706",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Bosque da Imaginação",
-      "s": "bosque-da-imaginacao",
-      "r": "81154",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
     },
@@ -6971,88 +7077,10 @@
       "error": "clean-hf-source-not-found"
     },
     {
-      "f": "Kantai",
-      "c": "Aditare 3",
-      "s": "aditare-3",
-      "r": "AD300008R",
-      "u": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
-      "crop": "kt",
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "f": "Kantai",
-      "c": "Aditare 3",
-      "s": "aditare-3",
-      "r": "AD300605R",
-      "u": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
-      "crop": "kt",
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "f": "Kantai",
-      "c": "Criativo 3",
-      "s": "criativo-3",
-      "r": "CR333715R",
-      "u": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
-      "crop": "kt",
-      "status": "not_found",
-      "error": "blank-image-rejected"
-    },
-    {
-      "f": "Kantai",
-      "c": "Poet Chart 5",
-      "s": "poet-chart-5",
-      "r": "PT500705",
-      "u": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
-      "crop": "top-half",
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "f": "Kantai",
-      "c": "Poet Chart 5",
-      "s": "poet-chart-5",
-      "r": "PT501101",
-      "u": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
-      "crop": "top-half",
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "f": "Kantai",
-      "c": "Space IX",
-      "s": "space-ix",
-      "r": "9S161008",
-      "u": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
-      "crop": null,
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
-      "f": "Kantai",
-      "c": "Space IX",
-      "s": "space-ix",
-      "r": "9S161202",
-      "u": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
-      "crop": null,
-      "status": "not_found",
-      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-    },
-    {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WK205102",
-      "page": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WK205107",
       "page": null,
       "status": "not_found"
     },
@@ -7068,7 +7096,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA67601",
+      "r": "TAC-WK205107",
       "page": null,
       "status": "not_found"
     },
@@ -7076,7 +7104,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA67603",
+      "r": "TAC-WKA67601",
       "page": null,
       "status": "not_found"
     },
@@ -7092,7 +7120,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA69101",
+      "r": "TAC-WKA67603",
       "page": null,
       "status": "not_found"
     },
@@ -7100,7 +7128,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA69103",
+      "r": "TAC-WKA69101",
       "page": null,
       "status": "not_found"
     },
@@ -7116,7 +7144,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76002",
+      "r": "TAC-WKA69103",
       "page": null,
       "status": "not_found"
     },
@@ -7132,7 +7160,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76101",
+      "r": "TAC-WKA76002",
       "page": null,
       "status": "not_found"
     },
@@ -7140,7 +7168,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76103",
+      "r": "TAC-WKA76101",
       "page": null,
       "status": "not_found"
     },
@@ -7156,7 +7184,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77901",
+      "r": "TAC-WKA76103",
       "page": null,
       "status": "not_found"
     },
@@ -7164,7 +7192,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77903",
+      "r": "TAC-WKA77901",
       "page": null,
       "status": "not_found"
     },
@@ -7180,7 +7208,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77905",
+      "r": "TAC-WKA77903",
       "page": null,
       "status": "not_found"
     },
@@ -7196,7 +7224,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78301",
+      "r": "TAC-WKA77905",
       "page": null,
       "status": "not_found"
     },
@@ -7204,7 +7232,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78303",
+      "r": "TAC-WKA78301",
       "page": null,
       "status": "not_found"
     },
@@ -7220,7 +7248,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78305",
+      "r": "TAC-WKA78303",
       "page": null,
       "status": "not_found"
     },
@@ -7236,7 +7264,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78307",
+      "r": "TAC-WKA78305",
       "page": null,
       "status": "not_found"
     },
@@ -7252,6 +7280,14 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
+      "r": "TAC-WKA78307",
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
       "r": "TAC-WKA78501",
       "page": null,
       "status": "not_found"
@@ -7260,7 +7296,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78503",
+      "r": "TAC-WKA78502",
       "page": null,
       "status": "not_found"
     },
@@ -7268,7 +7304,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78502",
+      "r": "TAC-WKA78503",
       "page": null,
       "status": "not_found"
     },
@@ -7292,14 +7328,6 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78703",
-      "page": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
       "r": "TAC-WKA78702",
       "page": null,
       "status": "not_found"
@@ -7308,7 +7336,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78705",
+      "r": "TAC-WKA78703",
       "page": null,
       "status": "not_found"
     },
@@ -7324,7 +7352,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78707",
+      "r": "TAC-WKA78705",
       "page": null,
       "status": "not_found"
     },
@@ -7340,7 +7368,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78710",
+      "r": "TAC-WKA78707",
       "page": null,
       "status": "not_found"
     },
@@ -7356,7 +7384,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78712",
+      "r": "TAC-WKA78710",
       "page": null,
       "status": "not_found"
     },
@@ -7365,6 +7393,14 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78711",
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA78712",
       "page": null,
       "status": "not_found"
     },
