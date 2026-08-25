@@ -1,6 +1,7 @@
 from __future__ import annotations
-import io, json, os, gzip, base64, re
+import io, json, os, gzip, base64, re, html
 from pathlib import Path
+from urllib.parse import quote, urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 from PIL import Image, ImageOps
@@ -9,8 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'
 TIMEOUT=30
-UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/5.0)'
-HF_MAP_PATH=ROOT/'dados'/'home-finish-urls-validadas-v2.json.gz.b64'
+UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/6.0)'
+HF_MAP_DIR=ROOT/'dados'/'home-finish-urls'
 
 def normalize_collection(data):
     if data.get('records'): return data['records']
@@ -33,10 +34,14 @@ def load_records():
     return out
 
 def load_hf_map():
-    s=''.join(HF_MAP_PATH.read_text(encoding='ascii').split())
-    raw=gzip.decompress(base64.b64decode(s)).decode('utf-8')
-    data=json.loads(raw)
-    return data.get('items',{})
+    items={}
+    for p in sorted(HF_MAP_DIR.glob('part-*.json')):
+        data=json.loads(p.read_text(encoding='utf-8'))
+        items.update(data.get('items',{}))
+    print(f'HF_MAP loaded={len(items)}',flush=True)
+    if len(items)!=619:
+        raise RuntimeError(f'hf-map-incomplete-{len(items)}')
+    return items
 
 HF_MAP=load_hf_map()
 
@@ -55,6 +60,31 @@ def fetch_image(session,url):
     im=Image.open(io.BytesIO(r.content)); im.load()
     return im.convert('RGB')
 
+def find_download_jpg(page_html,base_url):
+    txt=html.unescape(page_html).replace('\\/','/')
+    pats=[
+        r'<a[^>]+href=["\']([^"\']+\.(?:jpe?g|png)(?:\?[^"\']*)?)["\'][^>]*>[^<]{0,260}BAIXAR\s+JPG',
+        r'href=["\']([^"\']+\.(?:jpe?g|png)(?:\?[^"\']*)?)["\'][^>]*>[^<]{0,320}(?:BAIXAR|DOWNLOAD)\s+JPG',
+    ]
+    for pat in pats:
+        m=re.search(pat,txt,re.I|re.S)
+        if m:
+            u=urljoin(base_url,m.group(1))
+            if not any(x in u.lower() for x in ('watermark','marca-dagua','marca_dagua','com-marca')):
+                return u
+    return None
+
+def discover_hf_official(session,ref):
+    lookup=normalize_ref(ref)
+    for page in [f'https://homefinish.com.br/papel-de-parede/{lookup}/',f'https://www.homefinish.com.br/papel-de-parede/{lookup}/']:
+        try:
+            r=session.get(page,timeout=TIMEOUT)
+            if r.ok:
+                u=find_download_jpg(r.text,page)
+                if u: return u
+        except Exception: pass
+    return None
+
 def save_pair(im,base,ref):
     od=base/'originals'; td=base/'thumbnails'
     od.mkdir(parents=True,exist_ok=True); td.mkdir(parents=True,exist_ok=True)
@@ -71,9 +101,13 @@ def fetch_one(rec):
         if vendor=='Home Finish':
             key=f'{col}|{normalize_ref(ref)}'
             entry=HF_MAP.get(key)
-            if not entry or not entry.get('url'):
-                raise ValueError('validated-hf-url-missing')
-            source=entry['url']
+            source=(entry or {}).get('url')
+            # URLs HTTP já validadas são usadas diretamente. IDs iNNN eram imagens embutidas
+            # do HTML antigo e NÃO são reutilizados, pois continham vários recortes ruins.
+            if not source or not source.startswith(('http://','https://')):
+                source=discover_hf_official(session,ref)
+            if not source:
+                raise ValueError('clean-hf-source-not-found')
             im=fetch_image(session,source)
         else:
             source=normalize_wix_url(rec.get('u'))
@@ -103,7 +137,7 @@ def main():
     items.sort(key=lambda x:(x.get('f',''),x.get('c',''),str(x.get('r',''))))
     failures.sort(key=lambda x:(x.get('f',''),x.get('c',''),str(x.get('r',''))))
     manifest_path.write_text(json.dumps({'ready':len(items),'failed':len(failures),'items':items,'failures':failures},ensure_ascii=False,indent=2),encoding='utf-8')
-    print(f'CLEAN READY={len(ready)} FAILED={len(failed)}')
+    print(f'CLEAN READY={len(ready)} FAILED={len(failed)}',flush=True)
 
 if __name__=='__main__':
     main()
