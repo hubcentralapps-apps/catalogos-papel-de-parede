@@ -36,3 +36,5 @@ jobs:
             git commit -m "Build image library for reviewed collections"
             git push
           fi
+
+# Trigger rebuild after loading reviewed collections.
