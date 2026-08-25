@@ -29,6 +29,7 @@ jobs:
           python-version: '3.12'
       - run: pip install pillow requests beautifulsoup4
 
+      # patch-run-v2: usa URLs diretas e preserva todo o restante da biblioteca
       - name: Patch only Home Finish problem images
         if: contains(github.event.head_commit.message, '[HF PATCH]')
         run: python scripts/patch_home_finish.py
