@@ -41,7 +41,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A imagens/home-finish imagens/kantai dados/biblioteca-imagens.json staging || true
+          if [ -d imagens ]; then git add -A imagens; fi
+          git add -A dados/biblioteca-imagens.json
+          if [ -d staging ]; then git add -A staging; fi
           if git diff --cached --quiet; then
             echo "No Home Finish/Kantai changes"
           else
@@ -52,7 +54,9 @@ jobs:
       - name: Commit Wiler library
         run: |
           git pull --rebase
-          git add -A imagens/wiler dados/biblioteca-imagens.json staging || true
+          if [ -d imagens/wiler ]; then git add -A imagens/wiler; fi
+          git add -A dados/biblioteca-imagens.json
+          if [ -d staging ]; then git add -A staging; fi
           if git diff --cached --quiet; then
             echo "No Wiler changes"
           else
