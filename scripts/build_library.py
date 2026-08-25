@@ -5,7 +5,7 @@ import requests
 from PIL import Image, ImageOps
 
 ROOT=Path(__file__).resolve().parents[1] if '__file__' in globals() else Path('.')
-DATA=ROOT/'dados'/'colecoes-processadas.json'
+DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'
 TIMEOUT=20
 UA='Mozilla/5.0 (compatible; FK-Catalog-Image-Library/1.0)'
@@ -78,10 +78,12 @@ def save_original_and_thumb(im, base, ref):
     return orig,thumb
 
 def main():
-    data=json.loads(DATA.read_text(encoding='utf-8'))
+    records=[]
+    for p in sorted(DATA_DIR.glob('*.json')):
+        records.extend(json.loads(p.read_text(encoding='utf-8')).get('records',[]))
     session=requests.Session(); session.headers.update({'User-Agent':UA})
     manifest=[]; failures=[]
-    for n,rec in enumerate(data['records'],1):
+    for n,rec in enumerate(records,1):
         vendor=rec['f']; col=rec['c']; slug=rec['s']; ref=str(rec['r'])
         base=OUT/('home-finish' if vendor=='Home Finish' else 'kantai')/slug
         orig=base/'originals'/f'{ref}.jpg'; thumb=base/'thumbnails'/f'{ref}.jpg'
@@ -93,14 +95,14 @@ def main():
         im,url=fetch_image(session,urls)
         if im is None:
             failures.append({**rec,'status':'not_found'})
-            print(f'[{n}/{len(data["records"])}] FAIL {vendor} {col} {ref}',flush=True)
+            print(f'[{n}/{len(records)}] FAIL {vendor} {col} {ref}',flush=True)
             continue
         if vendor=='Kantai' and rec.get('crop')=='top-half':
             w,h=im.size
             im=im.crop((0,0,w,h//2))
         orig,thumb=save_original_and_thumb(im,base,ref)
         manifest.append({**rec,'source_resolved':url,'original':str(orig.relative_to(ROOT)),'thumbnail':str(thumb.relative_to(ROOT)),'width':im.width,'height':im.height,'status':'ready'})
-        print(f'[{n}/{len(data["records"])}] OK {vendor} {col} {ref} {im.width}x{im.height}',flush=True)
+        print(f'[{n}/{len(records)}] OK {vendor} {col} {ref} {im.width}x{im.height}',flush=True)
         time.sleep(0.03)
     (ROOT/'dados').mkdir(exist_ok=True)
     (ROOT/'dados'/'biblioteca-imagens.json').write_text(json.dumps({'ready':len(manifest),'failed':len(failures),'items':manifest,'failures':failures},ensure_ascii=False,indent=2),encoding='utf-8')
