@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io, json, os, sys, time
+import io, json, os, sys, time, gzip, base64
 from pathlib import Path
 import requests
 from PIL import Image, ImageOps
@@ -53,6 +53,15 @@ def hf_candidates(col, ref):
                 for ex in EXTS: add(f'{b}/{m}/{st}{ex}')
     return out
 
+def load_records():
+    records=[]
+    for p in sorted(DATA_DIR.glob('*.json')):
+        records.extend(json.loads(p.read_text(encoding='utf-8')).get('records',[]))
+    for p in sorted(DATA_DIR.glob('*.json.gz.b64')):
+        raw=gzip.decompress(base64.b64decode(p.read_text(encoding='ascii'))).decode('utf-8')
+        records.extend(json.loads(raw).get('records',[]))
+    return records
+
 def fetch_image(session, urls):
     for url in urls:
         try:
@@ -78,9 +87,7 @@ def save_original_and_thumb(im, base, ref):
     return orig,thumb
 
 def main():
-    records=[]
-    for p in sorted(DATA_DIR.glob('*.json')):
-        records.extend(json.loads(p.read_text(encoding='utf-8')).get('records',[]))
+    records=load_records()
     session=requests.Session(); session.headers.update({'User-Agent':UA})
     manifest=[]; failures=[]
     for n,rec in enumerate(records,1):
