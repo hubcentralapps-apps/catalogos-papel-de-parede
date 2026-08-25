@@ -1,5 +1,5 @@
 from __future__ import annotations
-import io, json, os, gzip, base64, re
+import io, json, os, gzip, base64, re, html
 from pathlib import Path
 from urllib.parse import quote, urljoin
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -10,41 +10,42 @@ from PIL import Image, ImageOps
 ROOT=Path(__file__).resolve().parents[1]
 DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'
-TIMEOUT=10
-UA='Mozilla/5.0 (compatible; FK-Catalog-Image-Library/2.0)'
+TIMEOUT=25
+UA='Mozilla/5.0 (compatible; FK-Catalog-Image-Library/3.0)'
 
 BASES=['https://www.homefinish.com.br/wp-content/uploads','https://homefinish.com.br/wp-content/uploads']
 EXTS=['.jpg','-1.jpg','_1.jpg']
 
 def hf_candidates(col, ref):
+    ref_lookup=re.sub(r'^(?:BH|MI)','',str(ref),flags=re.I)
     out=[]
     def add(u):
         if u and u not in out: out.append(u)
     if col=='BIO Habitat':
-        months=['2023/08','2024/09']; stems=[f'papel-parede-nacional-home-finish-bio-habitat-{ref}',f'papel-parede-nacional-homefinish-bio-habitat-{ref}']
+        months=['2023/08','2024/09']; stems=[f'papel-parede-nacional-home-finish-bio-habitat-{ref_lookup}',f'papel-parede-nacional-homefinish-bio-habitat-{ref_lookup}']
     elif col=='Biomas':
-        months=['2024/09','2023/08']; stems=[f'papel-parede-nacional-homefinish-biomas-{ref}',f'papel-parede-nacional-home-finish-biomas-{ref}']
+        months=['2024/09','2023/08']; stems=[f'papel-parede-nacional-homefinish-biomas-{ref_lookup}',f'papel-parede-nacional-home-finish-biomas-{ref_lookup}']
     elif col=='Bosque da Imaginação':
-        months=['2024/04','2024/09']; stems=[f'papel-parede-nacional-homefinish-bosque-da-imaginacao-{ref}',f'papel-parede-nacional-home-finish-bosque-da-imaginacao-{ref}']
+        months=['2024/04','2024/09']; stems=[f'papel-parede-nacional-homefinish-bosque-da-imaginacao-{ref_lookup}',f'papel-parede-nacional-home-finish-bosque-da-imaginacao-{ref_lookup}']
     elif col=='Botânica':
-        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-homefinish-botanica-{ref}',f'papel-parede-nacional-home-finish-botanica-{ref}']
+        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-homefinish-botanica-{ref_lookup}',f'papel-parede-nacional-home-finish-botanica-{ref_lookup}']
     elif col=='Doce Estilo':
-        months=['2024/09','2025/01']; stems=[f'papel-parede-nacional-doce-estilo-home-finish-{ref}',f'papel-parede-nacional-home-finish-doce-estilo-{ref}']
+        months=['2024/09','2025/01']; stems=[f'papel-parede-nacional-doce-estilo-home-finish-{ref_lookup}',f'papel-parede-nacional-home-finish-doce-estilo-{ref_lookup}']
     elif col=='Era Uma Vez':
-        months=['2025/10','2025/09']; stems=[f'{ref}-papel-parede-era-uma-vez-home-finish',f'papel-parede-era-uma-vez-home-finish-{ref}']
+        months=['2025/10','2025/09']; stems=[f'{ref_lookup}-papel-parede-era-uma-vez-home-finish',f'papel-parede-era-uma-vez-home-finish-{ref_lookup}']
     elif col=='Flora':
-        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-flora-{ref}',f'papel-parede-nacional-homefinish-flora-{ref}']
+        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-flora-{ref_lookup}',f'papel-parede-nacional-homefinish-flora-{ref_lookup}']
     elif col=='Natureza Lúdica':
-        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-natureza-ludica-{ref}',f'papel-parede-nacional-homefinish-natureza-ludica-{ref}']
+        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-natureza-ludica-{ref_lookup}',f'papel-parede-nacional-homefinish-natureza-ludica-{ref_lookup}']
     elif col=='Provence':
-        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-provence-{ref}',f'papel-parede-nacional-homefinish-provence-{ref}']
+        months=['2024/09','2024/04']; stems=[f'papel-parede-nacional-home-finish-provence-{ref_lookup}',f'papel-parede-nacional-homefinish-provence-{ref_lookup}']
     elif col=='Tartan':
-        months=['2025/10','2025/09']; stems=[f'{ref}-papel-parede-home-finish-studio-tartan',f'{ref}-papel-parede-homefinish-studio-tartan']
+        months=['2025/10','2025/09']; stems=[f'{ref_lookup}-papel-parede-home-finish-studio-tartan',f'{ref_lookup}-papel-parede-homefinish-studio-tartan']
     elif col=='Passeio no Campo':
-        months=['2026/04','2026/03']; stems=[f'papel-parede-homefinish-{ref}',f'papel-parede-home-finish-{ref}']
+        months=['2026/04','2026/03']; stems=[f'papel-parede-homefinish-{ref_lookup}',f'papel-parede-home-finish-{ref_lookup}']
     else:
         return out
-    for b in BASES[:1]:
+    for b in BASES:
         for m in months:
             for st in stems:
                 for ex in EXTS: add(f'{b}/{m}/{st}{ex}')
@@ -70,65 +71,50 @@ def load_records():
         seen.add(k); dedup.append(r)
     return dedup
 
-def wp_original(url):
-    if not url: return url
-    url=url.split(' ')[0].strip()
-    return re.sub(r'-\d+x\d+(?=\.(?:jpe?g|png|webp)(?:\?|$))','',url,flags=re.I)
+def find_download_jpg(page_html, base_url):
+    txt=html.unescape(page_html).replace('\\/','/')
+    pats=[
+        r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>[^<]{0,120}BAIXAR\s+JPG',
+        r'href=["\']([^"\']+\.jpe?g(?:\?[^"\']*)?)["\'][^>]*>[^<]{0,160}BAIXAR\s+JPG',
+        r'["\']([^"\']+\.jpe?g(?:\?[^"\']*)?)["\'][^<>]{0,350}BAIXAR\s+JPG'
+    ]
+    for pat in pats:
+        m=re.search(pat,txt,re.I|re.S)
+        if m: return urljoin(base_url,m.group(1))
+    pos=re.search(r'BAIXAR\s+JPG',txt,re.I)
+    if pos:
+        chunk=txt[max(0,pos.start()-1600):pos.end()+1600]
+        urls=re.findall(r'https?://[^"\'<>\s]+\.jpe?g(?:\?[^"\'<>\s]*)?',chunk,re.I)
+        if urls: return urls[-1]
+    return None
 
-def image_candidates_from_html(txt, ref):
-    soup=BeautifulSoup(txt,'html.parser')
-    out=[]; digits=re.sub(r'\D','',str(ref))
-    for img in soup.find_all('img'):
-        alt=' '.join([img.get('alt',''),img.get('title','')])
-        urls=[]
-        for a in ('data-src','data-lazy-src','src'):
-            if img.get(a): urls.append(img.get(a))
-        for a in ('srcset','data-srcset'):
-            if img.get(a):
-                for part in img.get(a).split(','): urls.append(part.strip().split(' ')[0])
-        for u in urls:
-            if not u: continue
-            u=urljoin('https://homefinish.com.br/',u)
-            t=(u+' '+alt).lower(); score=0
-            if str(ref).lower() in t or (digits and digits in t): score+=40
-            if 'papel' in t or 'parede' in t: score+=8
-            if 'home' in t or 'finish' in t: score+=4
-            if 'ambiente' in t or 'banner' in t or 'logo' in t: score-=35
-            if '150x150' in t or '100x100' in t or 'woocommerce_thumbnail' in t: score-=8
-            out.append((score,wp_original(u),alt))
-    out.sort(key=lambda x:x[0],reverse=True)
-    seen=set(); clean=[]
-    for x in out:
-        if x[1] in seen: continue
-        seen.add(x[1]); clean.append(x)
-    return clean
-
-def discover_hf_source(ref):
+def discover_hf_official(ref, collection):
+    ref_s=str(ref)
+    lookup=re.sub(r'^(?:BH|MI)','',ref_s,flags=re.I)
     s=requests.Session(); s.headers.update({'User-Agent':UA})
-    search_url=f'https://homefinish.com.br/?s={quote(str(ref))}&post_type=product'
-    try:
-        r=s.get(search_url,timeout=TIMEOUT,allow_redirects=True)
-        if r.ok:
-            cands=image_candidates_from_html(r.text,ref)
-            if cands and cands[0][0] >= 35: return cands[0][1]
-            soup=BeautifulSoup(r.text,'html.parser')
-            links=[]
-            for a in soup.find_all('a',href=True):
-                href=urljoin(search_url,a['href'])
-                text=a.get_text(' ',strip=True)
-                parent=a.parent.get_text(' ',strip=True) if a.parent else ''
-                if str(ref) in (text+' '+parent) and 'homefinish.com.br' in href and '/papel-de-parede/' in href:
-                    links.append(href)
-            for href in links[:2]:
-                try:
-                    rp=s.get(href,timeout=TIMEOUT,allow_redirects=True)
-                    if rp.ok:
-                        cands=image_candidates_from_html(rp.text,ref)
-                        if cands and cands[0][0] >= 25: return cands[0][1]
-                except Exception:
-                    pass
-    except Exception:
-        pass
+    for term in (ref_s,lookup):
+        try:
+            api=f'https://www.homefinish.com.br/wp-json/wc/store/v1/products?search={quote(term)}&per_page=30'
+            r=s.get(api,timeout=TIMEOUT); r.raise_for_status()
+            products=r.json() if isinstance(r.json(),list) else []
+            ranked=[]
+            for p in products:
+                vals=' '.join(str(p.get(k,'') or '') for k in ('sku','name','slug','permalink'))
+                if not re.search(r'(^|[^0-9])'+re.escape(lookup)+r'([^0-9]|$)',vals):
+                    continue
+                score=20 if str(p.get('sku','')) in {ref_s,lookup} else 0
+                if collection.lower() in vals.lower(): score+=5
+                ranked.append((score,p))
+            ranked.sort(key=lambda x:x[0],reverse=True)
+            for _,p in ranked[:3]:
+                page=p.get('permalink')
+                if not page: continue
+                pr=s.get(page,timeout=TIMEOUT); pr.raise_for_status()
+                jpg=find_download_jpg(pr.text,page)
+                if jpg and not any(x in jpg.lower() for x in ('watermark','marca-dagua','marca_dagua','com-marca')):
+                    return jpg
+        except Exception:
+            pass
     return None
 
 def fetch_one(rec):
@@ -136,14 +122,18 @@ def fetch_one(rec):
     base=OUT/('home-finish' if vendor=='Home Finish' else 'kantai')/slug
     orig=base/'originals'/f'{ref}.jpg'; thumb=base/'thumbnails'/f'{ref}.jpg'
     if orig.exists() and thumb.exists():
-        return 'ready',{**rec,'original':str(orig.relative_to(ROOT)),'thumbnail':str(thumb.relative_to(ROOT)),'status':'ready'}
+        try:
+            with Image.open(orig) as im: w,h=im.size
+            return 'ready',{**rec,'original':str(orig.relative_to(ROOT)),'thumbnail':str(thumb.relative_to(ROOT)),'width':w,'height':h,'status':'ready'}
+        except Exception:
+            pass
     s=requests.Session(); s.headers.update({'User-Agent':UA})
     urls=[]
     if vendor=='Kantai':
         if rec.get('u'): urls=[rec.get('u')]
     else:
-        discovered=discover_hf_source(ref)
-        if discovered: urls.append(discovered)
+        official=discover_hf_official(ref,col)
+        if official: urls.append(official)
         urls += [u for u in hf_candidates(col,ref) if u not in urls]
     im=None; source=None
     for url in urls:
@@ -165,7 +155,7 @@ def fetch_one(rec):
 
 def main():
     records=load_records(); manifest=[]; failures=[]
-    workers=int(os.environ.get('LIBRARY_WORKERS','10'))
+    workers=int(os.environ.get('LIBRARY_WORKERS','8'))
     with ThreadPoolExecutor(max_workers=workers) as ex:
         futs={ex.submit(fetch_one,r):r for r in records}
         done=0
