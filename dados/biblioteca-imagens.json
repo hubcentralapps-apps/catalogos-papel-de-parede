@@ -1,6 +1,6 @@
 {
-  "ready": 75,
-  "failed": 712,
+  "ready": 115,
+  "failed": 672,
   "items": [
     {
       "f": "Kantai",
@@ -998,6 +998,566 @@
       "source_resolved": "https://static.wixstatic.com/media/3a4455_6103d433b45c4876b135c648e2e05f3a~mv2.jpg",
       "original": "imagens/kantai/poet-chart-5/originals/PT501103.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501103.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2002",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2002/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229386/PapeldeParedeTextureII-Texture2002-1.jpg?v=639183613299730000",
+      "source_label": "PapeldeParedeTextureII-Texture2002-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2002.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2002.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2003",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2003/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226950/PapeldeParedeTextureII-Texture2003-1.jpg?v=639156531423830000",
+      "source_label": "PapeldeParedeTextureII-Texture2003-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2003.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2003.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2004",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2004/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226960/PapeldeParedeTextureII-Texture2004-1.jpg?v=639156533977300000",
+      "source_label": "PapeldeParedeTextureII-Texture2004-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2004.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2004.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2005",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2005/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226955/PapeldeParedeTextureII-Texture2005-1.jpg?v=639156531819170000",
+      "source_label": "PapeldeParedeTextureII-Texture2005-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2005.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2005.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2006",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2006/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215546/PapeldeParedeTextureII-Texture2006-1.jpg?v=638846424376670000",
+      "source_label": "PapeldeParedeTextureII-Texture2006-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2006.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2006.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2007",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2007/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/227418/PapeldeParedeTextureII-Texture2007-1.jpg?v=639156731762330000",
+      "source_label": "PapeldeParedeTextureII-Texture2007-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2007.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2007.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2008",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2008/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229362/PapeldeParedeTextureII-Texture2008-1.jpg?v=639183610331830000",
+      "source_label": "PapeldeParedeTextureII-Texture2008-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2008.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2008.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2009",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2009/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229381/PapeldeParedeTextureII-Texture2009-1.jpg?v=639183612569570000",
+      "source_label": "PapeldeParedeTextureII-Texture2009-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2009.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2009.jpg",
+      "width": 1000,
+      "height": 723,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2010",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2010/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215526/PapeldeParedeTextureII-Texture2010-1.jpg?v=638846422640300000",
+      "source_label": "PapeldeParedeTextureII-Texture2010-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2010.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2010.jpg",
+      "width": 1000,
+      "height": 723,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2011",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2011/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/227429/PapeldeParedeTextureII-Texture2011-1.jpg?v=639156736589870000",
+      "source_label": "PapeldeParedeTextureII-Texture2011-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2011.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2011.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2012",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2012/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226940/PapeldeParedeTextureII-Texture2012-1.jpg?v=639156530140800000",
+      "source_label": "PapeldeParedeTextureII-Texture2012-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2012.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2012.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2013",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2013/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215579/PapeldeParedeTextureII-Texture2013-1.jpg?v=638846445443400000",
+      "source_label": "PapeldeParedeTextureII-Texture2013-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2013.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2013.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2014",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2014/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229399/PapeldeParedeTextureII-Texture2014-1.jpg?v=639183614106070000",
+      "source_label": "PapeldeParedeTextureII-Texture2014-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2014.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2014.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2015",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2015/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215506/PapeldeParedeTextureII-Texture2015-1.jpg?v=638846419489230000",
+      "source_label": "PapeldeParedeTextureII-Texture2015-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2015.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2015.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2016",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2016/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/227503/PapeldeParedeTextureII-Texture2016-1.jpg?v=639156761148570000",
+      "source_label": "PapeldeParedeTextureII-Texture2016-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2016.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2016.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2017",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2017/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215496/PapeldeParedeTextureII-Texture2017-1.jpg?v=638846418618270000",
+      "source_label": "PapeldeParedeTextureII-Texture2017-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2017.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2017.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2018",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2018/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215491/PapeldeParedeTextureII-Texture2018-1.jpg?v=638846418179070000",
+      "source_label": "PapeldeParedeTextureII-Texture2018-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2018.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2018.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2019",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2019/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226965/PapeldeParedeTextureII-Texture2019-1.jpg?v=639156534577100000",
+      "source_label": "PapeldeParedeTextureII-Texture2019-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2019.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2019.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2020",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2020/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215481/PapeldeParedeTextureII-Texture2020-1.jpg?v=638846417201330000",
+      "source_label": "PapeldeParedeTextureII-Texture2020-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2020.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2020.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2021",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2021/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215476/PapeldeParedeTextureII-Texture2021-1.jpg?v=638846416801300000",
+      "source_label": "PapeldeParedeTextureII-Texture2021-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2021.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2021.jpg",
+      "width": 1000,
+      "height": 764,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2022",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2022/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215471/PapeldeParedeTextureII-Texture2022-1.jpg?v=638846416542970000",
+      "source_label": "PapeldeParedeTextureII-Texture2022-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2022.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2022.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2033",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2033/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215441/PapeldeParedeTextureII-Texture2033-1.jpg?v=638846414484870000",
+      "source_label": "PapeldeParedeTextureII-Texture2033-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2033.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2033.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2034",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2034/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/230464/PapeldeParedeTextureII-Texture2034-1.webp?v=639205171744730000",
+      "source_label": "",
+      "original": "imagens/wiler/texture-ii/originals/TX-2034.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2034.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2035",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2035/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226935/PapeldeParedeTextureII-Texture2035-1.jpg?v=639156529902470000",
+      "source_label": "PapeldeParedeTextureII-Texture2035-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2035.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2035.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2036",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2036/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215421/PapeldeParedeTextureII-Texture2036-1.jpg?v=638846412433070000",
+      "source_label": "PapeldeParedeTextureII-Texture2036-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2036.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2036.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2037",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2037/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215411/PapeldeParedeTextureII-Texture2037-1.jpg?v=638846411489500000",
+      "source_label": "PapeldeParedeTextureII-Texture2037-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2037.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2037.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2038",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2038/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215406/PapeldeParedeTextureII-Texture2038-1.jpg?v=638846411111270000",
+      "source_label": "PapeldeParedeTextureII-Texture2038-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2038.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2038.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2039",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2039/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215401/PapeldeParedeTextureII-Texture2039-1.jpg?v=638846410754600000",
+      "source_label": "PapeldeParedeTextureII-Texture2039-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2039.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2039.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2040",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2040/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215396/PapeldeParedeTextureII-Texture2040-1.jpg?v=638846410266130000",
+      "source_label": "PapeldeParedeTextureII-Texture2040-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2040.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2040.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2041",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2041/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215391/PapeldeParedeTextureII-Texture2041-1.jpg?v=638846407905030000",
+      "source_label": "PapeldeParedeTextureII-Texture2041-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2041.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2041.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2043",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2043/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229367/PapeldeParedeTextureII-Texture2043-1.jpg?v=639183610540170000",
+      "source_label": "PapeldeParedeTextureII-Texture2043-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2043.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2043.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2044",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2044/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215376/PapeldeParedeTextureII-Texture2044-1.jpg?v=638846406092700000",
+      "source_label": "PapeldeParedeTextureII-Texture2044-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2044.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2044.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2045",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2045/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215371/PapeldeParedeTextureII-Texture2045-1.jpg?v=638846405649000000",
+      "source_label": "PapeldeParedeTextureII-Texture2045-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2045.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2045.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2046",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2046/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/226945/PapeldeParedeTextureII-Texture2046-1.jpg?v=639156530768930000",
+      "source_label": "PapeldeParedeTextureII-Texture2046-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2046.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2046.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2047",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2047/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/229372/PapeldeParedeTextureII-Texture2047-1.jpg?v=639183611106770000",
+      "source_label": "PapeldeParedeTextureII-Texture2047-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2047.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2047.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2048",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2048/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215356/PapeldeParedeTextureII-Texture2048-1.jpg?v=638846404296770000",
+      "source_label": "PapeldeParedeTextureII-Texture2048-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2048.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2048.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2049",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2049/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215351/PapeldeParedeTextureII-Texture2049-1.jpg?v=638846397453000000",
+      "source_label": "PapeldeParedeTextureII-Texture2049-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2049.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2049.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2050",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2050/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215346/PapeldeParedeTextureII-Texture2050-1.jpg?v=638846397165070000",
+      "source_label": "PapeldeParedeTextureII-Texture2050-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2050.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2050.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2051",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2051/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/215341/PapeldeParedeTextureII-Texture2051-1.jpg?v=638846396872700000",
+      "source_label": "PapeldeParedeTextureII-Texture2051-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2051.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2051.jpg",
+      "width": 1000,
+      "height": 1000,
+      "status": "ready"
+    },
+    {
+      "f": "Wiler",
+      "c": "Texture II",
+      "s": "texture-ii",
+      "r": "TX-2052",
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2052/p",
+      "source_resolved": "https://willerk.vteximg.com.br/arquivos/ids/223990/LISO-1.jpg?v=639148202920770000",
+      "source_label": "LISO-1",
+      "original": "imagens/wiler/texture-ii/originals/TX-2052.jpg",
+      "thumbnail": "imagens/wiler/texture-ii/thumbnails/TX-2052.jpg",
       "width": 1000,
       "height": 1000,
       "status": "ready"
@@ -5961,17 +6521,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WK205102",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WK205106",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -5979,8 +6529,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WK205107",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WK205106",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -5988,17 +6545,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA67601",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA67602",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6006,8 +6553,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA67603",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA67602",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6015,17 +6569,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA69101",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA69102",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6033,17 +6577,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA69103",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76001",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA69102",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6051,8 +6593,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA76002",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA76001",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6060,17 +6609,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA76101",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA76102",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6078,8 +6617,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA76103",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA76102",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6087,17 +6633,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA77901",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA77902",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6105,17 +6641,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA77903",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77904",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA77902",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6123,8 +6657,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA77905",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA77904",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6132,17 +6673,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78301",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA78302",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6150,17 +6681,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78303",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78304",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78302",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6168,17 +6697,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78305",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78306",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78304",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6186,8 +6713,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78307",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA78306",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6195,17 +6729,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78501",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA78502",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6213,8 +6737,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78503",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA78502",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6222,8 +6753,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78504",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6231,17 +6761,7 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78701",
-      "u": null,
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WKA78702",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6249,17 +6769,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78703",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78704",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78702",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6267,17 +6785,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78705",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78706",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78704",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6285,17 +6801,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78707",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78709",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78706",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6303,17 +6817,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78710",
-      "u": null,
-      "crop": null,
+      "page": null,
       "status": "not_found"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78711",
-      "u": null,
-      "crop": null,
+      "r": "TAC-WKA78709",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6321,8 +6833,15 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78712",
-      "u": null,
-      "crop": null,
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA78711",
+      "page": null,
       "status": "not_found"
     },
     {
@@ -6330,197 +6849,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2001",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2001/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2002",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2002/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2003",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2003/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2004",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2004/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2005",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2005/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2006",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2006/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2007",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2007/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2008",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2008/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2009",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2009/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2010",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2010/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2011",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2011/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2012",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2012/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2013",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2013/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2014",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2014/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2015",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2015/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2016",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2016/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2017",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2017/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2018",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2018/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2019",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2019/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2020",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2020/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2021",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2021/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2022",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2022/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2001/p",
       "status": "not_found"
     },
     {
@@ -6528,8 +6857,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2023",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2023/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2023/p",
       "status": "not_found"
     },
     {
@@ -6537,8 +6865,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2024",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2024/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2024/p",
       "status": "not_found"
     },
     {
@@ -6546,8 +6873,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2025",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2025/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2025/p",
       "status": "not_found"
     },
     {
@@ -6555,8 +6881,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2026",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2026/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2026/p",
       "status": "not_found"
     },
     {
@@ -6564,8 +6889,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2027",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2027/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2027/p",
       "status": "not_found"
     },
     {
@@ -6573,8 +6897,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2028",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2028/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2028/p",
       "status": "not_found"
     },
     {
@@ -6582,8 +6905,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2029",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2029/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2029/p",
       "status": "not_found"
     },
     {
@@ -6591,8 +6913,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2030",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2030/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2030/p",
       "status": "not_found"
     },
     {
@@ -6600,8 +6921,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2031",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2031/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2031/p",
       "status": "not_found"
     },
     {
@@ -6609,89 +6929,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2032",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2032/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2033",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2033/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2034",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2034/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2035",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2035/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2036",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2036/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2037",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2037/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2038",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2038/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2039",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2039/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2040",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2040/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2041",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2041/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2032/p",
       "status": "not_found"
     },
     {
@@ -6699,98 +6937,7 @@
       "c": "Texture II",
       "s": "texture-ii",
       "r": "TX-2042",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2042/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2043",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2043/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2044",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2044/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2045",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2045/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2046",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2046/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2047",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2047/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2048",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2048/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2049",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2049/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2050",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2050/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2051",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2051/p",
-      "crop": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Texture II",
-      "s": "texture-ii",
-      "r": "TX-2052",
-      "u": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2052/p",
-      "crop": null,
+      "page": "https://www.wiler.com.br/papel-de-parede-texture-ii-tx-2042/p",
       "status": "not_found"
     }
   ]
