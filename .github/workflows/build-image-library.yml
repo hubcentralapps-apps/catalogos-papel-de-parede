@@ -7,6 +7,7 @@ on:
       - 'dados/colecoes/**'
       - 'scripts/build_library.py'
       - 'scripts/build_wiler.py'
+      - 'staging/**'
       - '.github/workflows/build-image-library.yml'
   workflow_dispatch:
 
@@ -25,13 +26,22 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pillow requests
+      - name: Expand staged PDF collections
+        run: |
+          if compgen -G "staging/*.zip" > /dev/null; then
+            for archive in staging/*.zip; do
+              echo "Expanding $archive"
+              unzip -o "$archive" -d .
+              rm "$archive"
+            done
+          fi
       - run: python scripts/build_library.py
       - run: python scripts/build_wiler.py
       - name: Commit generated library
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add imagens dados/biblioteca-imagens.json
+          git add -A imagens dados staging
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
