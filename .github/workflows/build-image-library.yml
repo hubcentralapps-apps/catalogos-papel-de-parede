@@ -8,6 +8,7 @@ on:
       - 'scripts/build_library.py'
       - 'scripts/build_library_v2.py'
       - 'scripts/build_wiler.py'
+      - 'scripts/patch_home_finish.py'
       - 'staging/**'
       - '.github/workflows/build-image-library.yml'
   workflow_dispatch:
@@ -27,7 +28,27 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pillow requests beautifulsoup4
+
+      - name: Patch only Home Finish problem images
+        if: contains(github.event.head_commit.message, '[HF PATCH]')
+        run: python scripts/patch_home_finish.py
+
+      - name: Commit Home Finish patch
+        if: contains(github.event.head_commit.message, '[HF PATCH]')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -d imagens/home-finish ]; then git add -A imagens/home-finish; fi
+          git add -A dados/biblioteca-imagens.json
+          if git diff --cached --quiet; then
+            echo "No Home Finish patch changes"
+          else
+            git commit -m "Patch Home Finish problem images"
+            git push
+          fi
+
       - name: Expand staged PDF collections
+        if: ${{ !contains(github.event.head_commit.message, '[HF PATCH]') }}
         run: |
           if compgen -G "staging/*.zip" > /dev/null; then
             for archive in staging/*.zip; do
@@ -36,8 +57,13 @@ jobs:
               rm "$archive"
             done
           fi
-      - run: python scripts/build_library_v2.py
+
+      - name: Build Home Finish and Kantai library
+        if: ${{ !contains(github.event.head_commit.message, '[HF PATCH]') }}
+        run: python scripts/build_library_v2.py
+
       - name: Commit Home Finish and Kantai library
+        if: ${{ !contains(github.event.head_commit.message, '[HF PATCH]') }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -50,8 +76,13 @@ jobs:
             git commit -m "Build Home Finish and Kantai image library"
             git push
           fi
-      - run: python scripts/build_wiler.py
+
+      - name: Build Wiler library
+        if: ${{ !contains(github.event.head_commit.message, '[HF PATCH]') }}
+        run: python scripts/build_wiler.py
+
       - name: Commit Wiler library
+        if: ${{ !contains(github.event.head_commit.message, '[HF PATCH]') }}
         run: |
           if [ -d imagens/wiler ]; then git add -A imagens/wiler; fi
           git add -A dados/biblioteca-imagens.json
