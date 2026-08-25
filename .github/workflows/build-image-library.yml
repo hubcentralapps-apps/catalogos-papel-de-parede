@@ -6,6 +6,7 @@ on:
     paths:
       - 'dados/colecoes/**'
       - 'scripts/build_library.py'
+      - 'scripts/build_wiler.py'
       - '.github/workflows/build-image-library.yml'
   workflow_dispatch:
 
@@ -25,6 +26,7 @@ jobs:
           python-version: '3.12'
       - run: pip install pillow requests
       - run: python scripts/build_library.py
+      - run: python scripts/build_wiler.py
       - name: Commit generated library
         run: |
           git config user.name "github-actions[bot]"
