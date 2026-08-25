@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'
 TIMEOUT=30
-UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/5.0)'
+UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/5.1)'
 HF_MAP_PATH=ROOT/'dados'/'home-finish-urls-validadas.json.gz.b64'
 
 def normalize_collection(data):
@@ -33,7 +33,9 @@ def load_records():
     return out
 
 def load_hf_map():
-    raw=gzip.decompress(base64.b64decode(HF_MAP_PATH.read_text(encoding='ascii'))).decode('utf-8')
+    s=''.join(HF_MAP_PATH.read_text(encoding='ascii').split())
+    s += '=' * (-len(s) % 4)
+    raw=gzip.decompress(base64.b64decode(s)).decode('utf-8')
     data=json.loads(raw)
     return data.get('items',{})
 
