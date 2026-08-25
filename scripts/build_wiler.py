@@ -4,13 +4,13 @@ import io, json, re, time
 from pathlib import Path
 from urllib.parse import quote
 import requests
-from PIL import Image, ImageOps, ImageStat
+from PIL import Image, ImageOps
 
 ROOT=Path(__file__).resolve().parents[1]
 DATA_DIR=ROOT/'dados'/'colecoes'
 OUT=ROOT/'imagens'/'wiler'
 TIMEOUT=30
-UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/4.0)'
+UA='Mozilla/5.0 (compatible; FK-Catalog-Clean-Library/5.0)'
 
 
 def load_items():
@@ -86,26 +86,60 @@ def row_stats(im,y):
     return mean,var**0.5
 
 
-def trim_catalog_bands(im):
-    im=im.convert('RGB'); w,h=im.size
-    if h<180: return im
-    # Procura o início de uma faixa clara/cinza uniforme no rodapé. É onde
-    # Wiler grava códigos como TX-2049 / TR-4044.
+def find_top_content(im):
+    """Remove cabecalho/faixa superior de catalogo sem cortar a estampa."""
+    w,h=im.size
+    limit=max(10,int(h*.22))
+    # Se existe uma linha escura muito fina no topo, ignora-a e procura abaixo.
+    start=0
+    for y in range(min(12,h)):
+        mean,std=row_stats(im,y)
+        if mean<55 and std<35: start=y+1
+    # Procura transicao de uma faixa clara e pouco variada para a estampa.
+    uniform_run=0
+    for y in range(start,min(limit,h-8)):
+        mean,std=row_stats(im,y)
+        if mean>205 and std<32:
+            uniform_run+=1
+            continue
+        if uniform_run>=max(8,int(h*.018)):
+            # Confirma que as proximas linhas ja possuem variacao visual real.
+            future=[]
+            for yy in range(y,min(h,y+10)):
+                future.append(row_stats(im,yy)[1])
+            if future and sum(future)/len(future)>38:
+                return y
+        uniform_run=0
+    return 0
+
+
+def find_bottom_content(im):
+    w,h=im.size
     search_top=max(int(h*.72),0)
     candidate=None
     for y in range(search_top,h-4):
-        mean,std=row_stats(im,y)
         means=[]; stds=[]
         for yy in range(y,min(h,y+8)):
             m,s=row_stats(im,yy); means.append(m); stds.append(s)
-        if sum(means)/len(means) > 185 and sum(stds)/len(stds) < 26:
-            # confirma contraste com a textura imediatamente acima
+        band_mean=sum(means)/len(means); band_std=sum(stds)/len(stds)
+        if band_mean>185 and band_std<26:
             up=max(0,y-max(8,int(h*.03)))
             m_up,s_up=row_stats(im,up)
-            if abs(m_up-sum(means)/len(means))>8 or s_up>sum(stds)/len(stds)+8:
+            if abs(m_up-band_mean)>8 or s_up>band_std+8:
                 candidate=y; break
-    if candidate and candidate>h*.68:
-        return im.crop((0,0,w,candidate))
+    return candidate if candidate and candidate>h*.68 else h
+
+
+def trim_catalog_bands(im):
+    im=im.convert('RGB'); w,h=im.size
+    if h<180: return im
+    top=find_top_content(im)
+    bottom=find_bottom_content(im)
+    if bottom-top < max(160,int(h*.62)):
+        # Protecao contra recorte agressivo: nesse caso mantem o original.
+        return im
+    if top or bottom<h:
+        return im.crop((0,top,w,bottom))
     return im
 
 
@@ -135,7 +169,7 @@ def main():
     ready=[]; failed=[]
     for n,rec in enumerate(items,1):
         base=OUT/rec['s']; ref=rec['r']
-        # Reprocessa sempre: não reaproveita arquivo antigo com código/faixa.
+        # Reprocessa sempre para remover faixas superiores e inferiores residuais.
         im,url,label=fetch_image(session,fetch_candidates(session,rec))
         if im is None:
             failed.append({**rec,'status':'not_found'}); print(f'WILER FAIL {ref}',flush=True); continue
