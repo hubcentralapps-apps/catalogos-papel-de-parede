@@ -53,13 +53,31 @@ def hf_candidates(col, ref):
                 for ex in EXTS: add(f'{b}/{m}/{st}{ex}')
     return out
 
+def normalize_collection(data):
+    if data.get('records'):
+        return data['records']
+    vendor=data.get('fornecedor')
+    col=data.get('colecao')
+    slug=data.get('slug')
+    out=[]
+    for item in data.get('itens',[]):
+        out.append({
+            'f':vendor,
+            'c':col,
+            's':slug,
+            'r':item.get('r'),
+            'u':item.get('u'),
+            'crop':item.get('crop') or data.get('crop_default')
+        })
+    return out
+
 def load_records():
     records=[]
     for p in sorted(DATA_DIR.glob('*.json')):
-        records.extend(json.loads(p.read_text(encoding='utf-8')).get('records',[]))
+        records.extend(normalize_collection(json.loads(p.read_text(encoding='utf-8'))))
     for p in sorted(DATA_DIR.glob('*.json.gz.b64')):
         raw=gzip.decompress(base64.b64decode(p.read_text(encoding='ascii'))).decode('utf-8')
-        records.extend(json.loads(raw).get('records',[]))
+        records.extend(normalize_collection(json.loads(raw)))
     return records
 
 def fetch_image(session, urls):
@@ -104,7 +122,7 @@ def main():
             failures.append({**rec,'status':'not_found'})
             print(f'[{n}/{len(records)}] FAIL {vendor} {col} {ref}',flush=True)
             continue
-        if vendor=='Kantai' and rec.get('crop')=='top-half':
+        if vendor=='Kantai' and rec.get('crop') in {'top-half','kt'}:
             w,h=im.size
             im=im.crop((0,0,w,h//2))
         orig,thumb=save_original_and_thumb(im,base,ref)
