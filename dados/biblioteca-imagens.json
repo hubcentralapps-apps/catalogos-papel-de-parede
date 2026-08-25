@@ -1,6 +1,6 @@
 {
-  "ready": 180,
-  "failed": 632,
+  "ready": 171,
+  "failed": 641,
   "items": [
     {
       "f": "Home Finish",
@@ -142,18 +142,6 @@
       "source_resolved": "https://static.wixstatic.com/media/8e0c0d_59d568c41ec5470cb99eb18f6750a490~mv2.jpg",
       "original": "imagens/home-finish/bosque-da-imaginacao/originals/80690.jpg",
       "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/80690.jpg",
-      "width": 1080,
-      "height": 1080,
-      "status": "ready"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Bosque da Imaginação",
-      "s": "bosque-da-imaginacao",
-      "r": "80706",
-      "source_resolved": "https://static.wixstatic.com/media/8e0c0d_efa75c4028344c1c8645907defd021af~mv2.jpg",
-      "original": "imagens/home-finish/bosque-da-imaginacao/originals/80706.jpg",
-      "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/80706.jpg",
       "width": 1080,
       "height": 1080,
       "status": "ready"
@@ -462,18 +450,6 @@
       "f": "Home Finish",
       "c": "Bosque da Imaginação",
       "s": "bosque-da-imaginacao",
-      "r": "81154",
-      "source_resolved": "https://cdn.awsli.com.br/1000x1000/2492/2492075/produto/272399778/papel-de-parede-bosque-da-imagina-o-81154-gsc2xd7mll.png",
-      "original": "imagens/home-finish/bosque-da-imaginacao/originals/81154.jpg",
-      "thumbnail": "imagens/home-finish/bosque-da-imaginacao/thumbnails/81154.jpg",
-      "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Bosque da Imaginação",
-      "s": "bosque-da-imaginacao",
       "r": "81161",
       "source_resolved": "https://cdn.awsli.com.br/1000x1000/2492/2492075/produto/272397037/papel-de-parede-bosque-da-imagina-o-81161-b8lkz0a00m.png",
       "original": "imagens/home-finish/bosque-da-imaginacao/originals/81161.jpg",
@@ -488,11 +464,12 @@
       "s": "aditare-3",
       "r": "AD300001R",
       "u": "https://static.wixstatic.com/media/3a4455_2142f9500f5947da9f32d6615b5ce309~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_2142f9500f5947da9f32d6615b5ce309~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_2142f9500f5947da9f32d6615b5ce309~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300001R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300001R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -501,11 +478,12 @@
       "s": "aditare-3",
       "r": "AD300002R",
       "u": "https://static.wixstatic.com/media/3a4455_d6d4323fd09445289710d497eecb2234~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_d6d4323fd09445289710d497eecb2234~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_d6d4323fd09445289710d497eecb2234~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300002R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300002R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -514,11 +492,12 @@
       "s": "aditare-3",
       "r": "AD300003R",
       "u": "https://static.wixstatic.com/media/3a4455_f39a909a03a04277a6a8008a856db797~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_f39a909a03a04277a6a8008a856db797~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_f39a909a03a04277a6a8008a856db797~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300003R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300003R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -527,11 +506,12 @@
       "s": "aditare-3",
       "r": "AD300004R",
       "u": "https://static.wixstatic.com/media/3a4455_8a086432a20c4272a5fcaef1e5580fdc~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8a086432a20c4272a5fcaef1e5580fdc~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_8a086432a20c4272a5fcaef1e5580fdc~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300004R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300004R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -540,11 +520,12 @@
       "s": "aditare-3",
       "r": "AD300005R",
       "u": "https://static.wixstatic.com/media/3a4455_5cfdf0948e784d26a8f4487db8277cb3~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5cfdf0948e784d26a8f4487db8277cb3~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_5cfdf0948e784d26a8f4487db8277cb3~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300005R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300005R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -553,11 +534,12 @@
       "s": "aditare-3",
       "r": "AD300006R",
       "u": "https://static.wixstatic.com/media/3a4455_f0074ea5b5b14ac08863f5d592f97122~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_f0074ea5b5b14ac08863f5d592f97122~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_f0074ea5b5b14ac08863f5d592f97122~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300006R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300006R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -566,24 +548,12 @@
       "s": "aditare-3",
       "r": "AD300007R",
       "u": "https://static.wixstatic.com/media/3a4455_cdf07ee8e65b4679aa42bf7e08e717dd~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_cdf07ee8e65b4679aa42bf7e08e717dd~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_cdf07ee8e65b4679aa42bf7e08e717dd~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300007R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300007R.jpg",
       "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Aditare 3",
-      "s": "aditare-3",
-      "r": "AD300008R",
-      "u": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
-      "original": "imagens/kantai/aditare-3/originals/AD300008R.jpg",
-      "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300008R.jpg",
-      "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -592,11 +562,12 @@
       "s": "aditare-3",
       "r": "AD300009R",
       "u": "https://static.wixstatic.com/media/3a4455_567bbd3b62804c1895d9927f7ab4ebed~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_567bbd3b62804c1895d9927f7ab4ebed~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_567bbd3b62804c1895d9927f7ab4ebed~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300009R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300009R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -605,11 +576,12 @@
       "s": "aditare-3",
       "r": "AD300010R",
       "u": "https://static.wixstatic.com/media/3a4455_a7934fa147294213acd5909945e9837f~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_a7934fa147294213acd5909945e9837f~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_a7934fa147294213acd5909945e9837f~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300010R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300010R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -618,11 +590,12 @@
       "s": "aditare-3",
       "r": "AD300011R",
       "u": "https://static.wixstatic.com/media/3a4455_ff0ad2fdf84048bd8fd5c20354238341~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_ff0ad2fdf84048bd8fd5c20354238341~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_ff0ad2fdf84048bd8fd5c20354238341~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300011R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300011R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -631,11 +604,12 @@
       "s": "aditare-3",
       "r": "AD300012R",
       "u": "https://static.wixstatic.com/media/3a4455_cdeae87f722b44e89f20c7d7388b9f40~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_cdeae87f722b44e89f20c7d7388b9f40~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_cdeae87f722b44e89f20c7d7388b9f40~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300012R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300012R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -644,24 +618,12 @@
       "s": "aditare-3",
       "r": "AD300604R",
       "u": "https://static.wixstatic.com/media/3a4455_15a81e37f724405cb107fe8318f01fd1~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_15a81e37f724405cb107fe8318f01fd1~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_15a81e37f724405cb107fe8318f01fd1~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300604R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300604R.jpg",
       "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Aditare 3",
-      "s": "aditare-3",
-      "r": "AD300605R",
-      "u": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
-      "original": "imagens/kantai/aditare-3/originals/AD300605R.jpg",
-      "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300605R.jpg",
-      "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -670,11 +632,12 @@
       "s": "aditare-3",
       "r": "AD300606R",
       "u": "https://static.wixstatic.com/media/3a4455_84e6044b630f40db84317a4ddc21be3e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_84e6044b630f40db84317a4ddc21be3e~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_84e6044b630f40db84317a4ddc21be3e~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300606R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300606R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -683,11 +646,12 @@
       "s": "aditare-3",
       "r": "AD300607R",
       "u": "https://static.wixstatic.com/media/3a4455_b339d783827c44ef80c5baa8768f8bfd~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_b339d783827c44ef80c5baa8768f8bfd~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_b339d783827c44ef80c5baa8768f8bfd~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300607R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300607R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -696,11 +660,12 @@
       "s": "aditare-3",
       "r": "AD300608R",
       "u": "https://static.wixstatic.com/media/3a4455_7a35ee8bab29442f9871b7bc2e778bb4~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_7a35ee8bab29442f9871b7bc2e778bb4~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7a35ee8bab29442f9871b7bc2e778bb4~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300608R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300608R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -709,11 +674,12 @@
       "s": "aditare-3",
       "r": "AD300609R",
       "u": "https://static.wixstatic.com/media/3a4455_f99543c0f6ba487eaf321bce3738c622~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_f99543c0f6ba487eaf321bce3738c622~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_f99543c0f6ba487eaf321bce3738c622~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300609R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300609R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -722,11 +688,12 @@
       "s": "aditare-3",
       "r": "AD300701R",
       "u": "https://static.wixstatic.com/media/3a4455_a6e723d44cc14ab2ac93c87ad2ec5bd2~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_a6e723d44cc14ab2ac93c87ad2ec5bd2~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_a6e723d44cc14ab2ac93c87ad2ec5bd2~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300701R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300701R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -735,11 +702,12 @@
       "s": "aditare-3",
       "r": "AD300702R",
       "u": "https://static.wixstatic.com/media/3a4455_96afbba1f08840f5b95ab02876258e10~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_96afbba1f08840f5b95ab02876258e10~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_96afbba1f08840f5b95ab02876258e10~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300702R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300702R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -748,11 +716,12 @@
       "s": "aditare-3",
       "r": "AD300703R",
       "u": "https://static.wixstatic.com/media/3a4455_afbd8572659b449690fe23337dc727eb~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_afbd8572659b449690fe23337dc727eb~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_afbd8572659b449690fe23337dc727eb~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300703R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300703R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -761,11 +730,12 @@
       "s": "aditare-3",
       "r": "AD300704R",
       "u": "https://static.wixstatic.com/media/3a4455_5f0ff9c32e09458ea0402c3c1588c4d3~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5f0ff9c32e09458ea0402c3c1588c4d3~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_5f0ff9c32e09458ea0402c3c1588c4d3~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300704R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300704R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -774,11 +744,12 @@
       "s": "aditare-3",
       "r": "AD300705R",
       "u": "https://static.wixstatic.com/media/3a4455_7ebcb08f9a5b4392b6f015f6b53fdea8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_7ebcb08f9a5b4392b6f015f6b53fdea8~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7ebcb08f9a5b4392b6f015f6b53fdea8~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300705R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300705R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -787,11 +758,12 @@
       "s": "aditare-3",
       "r": "AD300706R",
       "u": "https://static.wixstatic.com/media/3a4455_959e28605278480192247397b4038de8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_959e28605278480192247397b4038de8~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_959e28605278480192247397b4038de8~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300706R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300706R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -800,11 +772,12 @@
       "s": "aditare-3",
       "r": "AD300707R",
       "u": "https://static.wixstatic.com/media/3a4455_7653ed9d87844a9797abef4aadb0d8c4~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_7653ed9d87844a9797abef4aadb0d8c4~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7653ed9d87844a9797abef4aadb0d8c4~mv2.jpg",
       "original": "imagens/kantai/aditare-3/originals/AD300707R.jpg",
       "thumbnail": "imagens/kantai/aditare-3/thumbnails/AD300707R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -813,11 +786,12 @@
       "s": "criativo-3",
       "r": "CR333704R",
       "u": "https://static.wixstatic.com/media/3a4455_e054b476a4954f9baea5b821b61ad240~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_e054b476a4954f9baea5b821b61ad240~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_e054b476a4954f9baea5b821b61ad240~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333704R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333704R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -826,11 +800,12 @@
       "s": "criativo-3",
       "r": "CR333705R",
       "u": "https://static.wixstatic.com/media/3a4455_a5419ecc92b8416a8ecff1a18356bcdd~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_a5419ecc92b8416a8ecff1a18356bcdd~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_a5419ecc92b8416a8ecff1a18356bcdd~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333705R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333705R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -839,11 +814,12 @@
       "s": "criativo-3",
       "r": "CR333706R",
       "u": "https://static.wixstatic.com/media/3a4455_304e64704b4c43c3adab551d400bf4c6~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_304e64704b4c43c3adab551d400bf4c6~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_304e64704b4c43c3adab551d400bf4c6~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333706R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333706R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -852,11 +828,12 @@
       "s": "criativo-3",
       "r": "CR333707R",
       "u": "https://static.wixstatic.com/media/3a4455_8f1b72c3cd7b476c9e8414958ac4ea05~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8f1b72c3cd7b476c9e8414958ac4ea05~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_8f1b72c3cd7b476c9e8414958ac4ea05~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333707R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333707R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -865,11 +842,12 @@
       "s": "criativo-3",
       "r": "CR333708R",
       "u": "https://static.wixstatic.com/media/3a4455_647f42faecef4fb0ae23a8c5c1ad13fc~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_647f42faecef4fb0ae23a8c5c1ad13fc~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_647f42faecef4fb0ae23a8c5c1ad13fc~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333708R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333708R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -878,11 +856,12 @@
       "s": "criativo-3",
       "r": "CR333709R",
       "u": "https://static.wixstatic.com/media/3a4455_cf1004c4e405430aa125db47bb6715ce~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_cf1004c4e405430aa125db47bb6715ce~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_cf1004c4e405430aa125db47bb6715ce~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333709R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333709R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -891,11 +870,12 @@
       "s": "criativo-3",
       "r": "CR333710R",
       "u": "https://static.wixstatic.com/media/3a4455_ae7bde46462a436886f39255d70728ac~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_ae7bde46462a436886f39255d70728ac~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_ae7bde46462a436886f39255d70728ac~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333710R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333710R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -904,11 +884,12 @@
       "s": "criativo-3",
       "r": "CR333711R",
       "u": "https://static.wixstatic.com/media/3a4455_33b444b8a113488e804a99df8b4c0c42~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_33b444b8a113488e804a99df8b4c0c42~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_33b444b8a113488e804a99df8b4c0c42~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333711R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333711R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -917,11 +898,12 @@
       "s": "criativo-3",
       "r": "CR333712R",
       "u": "https://static.wixstatic.com/media/3a4455_6114091dae614afcaabc36ddcff8226d~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_6114091dae614afcaabc36ddcff8226d~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_6114091dae614afcaabc36ddcff8226d~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333712R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333712R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -930,11 +912,12 @@
       "s": "criativo-3",
       "r": "CR333713R",
       "u": "https://static.wixstatic.com/media/3a4455_51c628f6d6534391ac69a2229daec553~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_51c628f6d6534391ac69a2229daec553~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_51c628f6d6534391ac69a2229daec553~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333713R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333713R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -943,24 +926,12 @@
       "s": "criativo-3",
       "r": "CR333714R",
       "u": "https://static.wixstatic.com/media/3a4455_b4f9e5ba95a74c6eba5ddda5793f5833~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_b4f9e5ba95a74c6eba5ddda5793f5833~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_b4f9e5ba95a74c6eba5ddda5793f5833~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333714R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333714R.jpg",
       "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Criativo 3",
-      "s": "criativo-3",
-      "r": "CR333715R",
-      "u": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
-      "original": "imagens/kantai/criativo-3/originals/CR333715R.jpg",
-      "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333715R.jpg",
-      "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -969,11 +940,12 @@
       "s": "criativo-3",
       "r": "CR333716R",
       "u": "https://static.wixstatic.com/media/3a4455_de919123e64e4c549bbdf63376524bc5~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_de919123e64e4c549bbdf63376524bc5~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_de919123e64e4c549bbdf63376524bc5~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333716R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333716R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -982,11 +954,12 @@
       "s": "criativo-3",
       "r": "CR333717R",
       "u": "https://static.wixstatic.com/media/3a4455_b655fcf5b12b4f3dbb6951c2bd10a55c~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_b655fcf5b12b4f3dbb6951c2bd10a55c~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_b655fcf5b12b4f3dbb6951c2bd10a55c~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333717R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333717R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -995,11 +968,12 @@
       "s": "criativo-3",
       "r": "CR333718R",
       "u": "https://static.wixstatic.com/media/3a4455_46d337f7643e4e50b07ee163421a72e7~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_46d337f7643e4e50b07ee163421a72e7~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_46d337f7643e4e50b07ee163421a72e7~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333718R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333718R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1008,11 +982,12 @@
       "s": "criativo-3",
       "r": "CR333719R",
       "u": "https://static.wixstatic.com/media/3a4455_ebad1c3f94ea4637b7a25638f2d05ac8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_ebad1c3f94ea4637b7a25638f2d05ac8~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_ebad1c3f94ea4637b7a25638f2d05ac8~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333719R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333719R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1021,11 +996,12 @@
       "s": "criativo-3",
       "r": "CR333720R",
       "u": "https://static.wixstatic.com/media/3a4455_678a0c0e9bff44e2a8b9f9fbd4c98554~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_678a0c0e9bff44e2a8b9f9fbd4c98554~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_678a0c0e9bff44e2a8b9f9fbd4c98554~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333720R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333720R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1034,11 +1010,12 @@
       "s": "criativo-3",
       "r": "CR333721R",
       "u": "https://static.wixstatic.com/media/3a4455_1e7cf67ac5f348eda2c74ee5a7b88c92~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_1e7cf67ac5f348eda2c74ee5a7b88c92~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_1e7cf67ac5f348eda2c74ee5a7b88c92~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333721R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333721R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1047,11 +1024,12 @@
       "s": "criativo-3",
       "r": "CR333722R",
       "u": "https://static.wixstatic.com/media/3a4455_1b3bc948dbf843858e5e68b1d3e35c34~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_1b3bc948dbf843858e5e68b1d3e35c34~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_1b3bc948dbf843858e5e68b1d3e35c34~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333722R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333722R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1060,11 +1038,12 @@
       "s": "criativo-3",
       "r": "CR333723R",
       "u": "https://static.wixstatic.com/media/3a4455_9c14735ed84640c6b3bd932e1f686ac7~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_9c14735ed84640c6b3bd932e1f686ac7~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_9c14735ed84640c6b3bd932e1f686ac7~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333723R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333723R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1073,11 +1052,12 @@
       "s": "criativo-3",
       "r": "CR333724R",
       "u": "https://static.wixstatic.com/media/3a4455_52ec75020c714460bb1d3a067ba81407~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_52ec75020c714460bb1d3a067ba81407~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_52ec75020c714460bb1d3a067ba81407~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333724R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333724R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1086,11 +1066,12 @@
       "s": "criativo-3",
       "r": "CR333725R",
       "u": "https://static.wixstatic.com/media/3a4455_5f244456c61b42f4a64792c188aea32e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5f244456c61b42f4a64792c188aea32e~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_5f244456c61b42f4a64792c188aea32e~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333725R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333725R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1099,11 +1080,12 @@
       "s": "criativo-3",
       "r": "CR333726R",
       "u": "https://static.wixstatic.com/media/3a4455_40b35b0660114174883a0aa811b96e28~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_40b35b0660114174883a0aa811b96e28~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_40b35b0660114174883a0aa811b96e28~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333726R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333726R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1112,11 +1094,12 @@
       "s": "criativo-3",
       "r": "CR333727R",
       "u": "https://static.wixstatic.com/media/3a4455_621ed36660cc449d80fe9145d5a79829~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_621ed36660cc449d80fe9145d5a79829~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_621ed36660cc449d80fe9145d5a79829~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333727R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333727R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1125,11 +1108,12 @@
       "s": "criativo-3",
       "r": "CR333728R",
       "u": "https://static.wixstatic.com/media/3a4455_3b0f031a0d4f4971b9bc2ee296ae5fbf~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_3b0f031a0d4f4971b9bc2ee296ae5fbf~mv2.jpg",
+      "crop": "kt",
       "source_resolved": "https://static.wixstatic.com/media/3a4455_3b0f031a0d4f4971b9bc2ee296ae5fbf~mv2.jpg",
       "original": "imagens/kantai/criativo-3/originals/CR333728R.jpg",
       "thumbnail": "imagens/kantai/criativo-3/thumbnails/CR333728R.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1143,7 +1127,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500702.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500702.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1157,7 +1141,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500703.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500703.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1171,21 +1155,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500704.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500704.jpg",
       "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Poet Chart 5",
-      "s": "poet-chart-5",
-      "r": "PT500705",
-      "u": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
-      "crop": "top-half",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
-      "original": "imagens/kantai/poet-chart-5/originals/PT500705.jpg",
-      "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500705.jpg",
-      "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1199,7 +1169,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500706.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500706.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1213,7 +1183,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500801.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500801.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1227,7 +1197,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500802.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500802.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1241,7 +1211,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500803.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500803.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1255,7 +1225,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500804.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500804.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1269,7 +1239,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500805.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500805.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1283,7 +1253,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500806.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500806.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1297,7 +1267,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500807.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500807.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1311,7 +1281,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500808.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500808.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1325,7 +1295,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500901.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500901.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1339,7 +1309,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500902.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500902.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1353,7 +1323,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500903.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500903.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1367,7 +1337,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT500904.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT500904.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1381,7 +1351,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501001.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501001.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1395,7 +1365,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501002.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501002.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1409,7 +1379,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501003.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501003.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1423,7 +1393,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501004.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501004.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1437,21 +1407,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501005.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501005.jpg",
       "width": 1000,
-      "height": 1000,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Poet Chart 5",
-      "s": "poet-chart-5",
-      "r": "PT501101",
-      "u": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
-      "crop": "top-half",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
-      "original": "imagens/kantai/poet-chart-5/originals/PT501101.jpg",
-      "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501101.jpg",
-      "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1465,7 +1421,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501102.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501102.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1479,7 +1435,7 @@
       "original": "imagens/kantai/poet-chart-5/originals/PT501103.jpg",
       "thumbnail": "imagens/kantai/poet-chart-5/thumbnails/PT501103.jpg",
       "width": 1000,
-      "height": 1000,
+      "height": 500,
       "status": "ready"
     },
     {
@@ -1488,6 +1444,7 @@
       "s": "space-ix",
       "r": "9S160101",
       "u": "https://static.wixstatic.com/media/3a4455_361dafade4e4467bb772da41f693bed4~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_361dafade4e4467bb772da41f693bed4~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160101.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160101.jpg",
@@ -1501,6 +1458,7 @@
       "s": "space-ix",
       "r": "9S160102",
       "u": "https://static.wixstatic.com/media/3a4455_80d800257ec84371a08df679b41c7e79~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_80d800257ec84371a08df679b41c7e79~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160102.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160102.jpg",
@@ -1514,6 +1472,7 @@
       "s": "space-ix",
       "r": "9S160103",
       "u": "https://static.wixstatic.com/media/3a4455_d23e40616e35459b860414beee6c88a9~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_d23e40616e35459b860414beee6c88a9~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160103.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160103.jpg",
@@ -1527,6 +1486,7 @@
       "s": "space-ix",
       "r": "9S160104",
       "u": "https://static.wixstatic.com/media/3a4455_9e920591621c4a0cb2e34083e1a10b00~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_9e920591621c4a0cb2e34083e1a10b00~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160104.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160104.jpg",
@@ -1540,6 +1500,7 @@
       "s": "space-ix",
       "r": "9S160105",
       "u": "https://static.wixstatic.com/media/3a4455_c6fdfd39fa77415bb8523957b460abcf~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_c6fdfd39fa77415bb8523957b460abcf~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160105.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160105.jpg",
@@ -1553,6 +1514,7 @@
       "s": "space-ix",
       "r": "9S160106",
       "u": "https://static.wixstatic.com/media/3a4455_6cee2a672d12418294a7c6afd980b48d~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_6cee2a672d12418294a7c6afd980b48d~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160106.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160106.jpg",
@@ -1566,6 +1528,7 @@
       "s": "space-ix",
       "r": "9S160905",
       "u": "https://static.wixstatic.com/media/3a4455_d6b322a9302e43308351f42535769e88~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_d6b322a9302e43308351f42535769e88~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S160905.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S160905.jpg",
@@ -1579,6 +1542,7 @@
       "s": "space-ix",
       "r": "9S161002",
       "u": "https://static.wixstatic.com/media/3a4455_cd82a48212114d79a9328b660b1520fb~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_cd82a48212114d79a9328b660b1520fb~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161002.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161002.jpg",
@@ -1592,6 +1556,7 @@
       "s": "space-ix",
       "r": "9S161003",
       "u": "https://static.wixstatic.com/media/3a4455_7c1f2e8e6dca4b23b49c217392e4b54c~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7c1f2e8e6dca4b23b49c217392e4b54c~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161003.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161003.jpg",
@@ -1605,6 +1570,7 @@
       "s": "space-ix",
       "r": "9S161004",
       "u": "https://static.wixstatic.com/media/3a4455_48ac30d21858429baa014eee3822b6d5~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_48ac30d21858429baa014eee3822b6d5~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161004.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161004.jpg",
@@ -1618,6 +1584,7 @@
       "s": "space-ix",
       "r": "9S161005",
       "u": "https://static.wixstatic.com/media/3a4455_8b1a6677601c4349a7c183ea1942533d~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_8b1a6677601c4349a7c183ea1942533d~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161005.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161005.jpg",
@@ -1631,6 +1598,7 @@
       "s": "space-ix",
       "r": "9S161006",
       "u": "https://static.wixstatic.com/media/3a4455_873d40907e294fdab11bdd16ba4a8ac5~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_873d40907e294fdab11bdd16ba4a8ac5~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161006.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161006.jpg",
@@ -1644,6 +1612,7 @@
       "s": "space-ix",
       "r": "9S161007",
       "u": "https://static.wixstatic.com/media/3a4455_a3876406413e487c84b16b98c21f8216~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_a3876406413e487c84b16b98c21f8216~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161007.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161007.jpg",
@@ -1655,21 +1624,9 @@
       "f": "Kantai",
       "c": "Space IX",
       "s": "space-ix",
-      "r": "9S161008",
-      "u": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
-      "original": "imagens/kantai/space-ix/originals/9S161008.jpg",
-      "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161008.jpg",
-      "width": 990,
-      "height": 990,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Space IX",
-      "s": "space-ix",
       "r": "9S161101",
       "u": "https://static.wixstatic.com/media/3a4455_c83d65b097354945933371e7ca0d34bc~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_c83d65b097354945933371e7ca0d34bc~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161101.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161101.jpg",
@@ -1683,6 +1640,7 @@
       "s": "space-ix",
       "r": "9S161102",
       "u": "https://static.wixstatic.com/media/3a4455_969af05ac69b4da08e9c95562dc0bf77~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_969af05ac69b4da08e9c95562dc0bf77~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161102.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161102.jpg",
@@ -1696,6 +1654,7 @@
       "s": "space-ix",
       "r": "9S161103",
       "u": "https://static.wixstatic.com/media/3a4455_95dab076c6fb43e2a5dd0c03a897816e~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_95dab076c6fb43e2a5dd0c03a897816e~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161103.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161103.jpg",
@@ -1709,6 +1668,7 @@
       "s": "space-ix",
       "r": "9S161104",
       "u": "https://static.wixstatic.com/media/3a4455_bcf6f258db1942df844513a0821a42cd~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_bcf6f258db1942df844513a0821a42cd~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161104.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161104.jpg",
@@ -1722,6 +1682,7 @@
       "s": "space-ix",
       "r": "9S161201",
       "u": "https://static.wixstatic.com/media/3a4455_7bf4cff40982401d941b39f108b99d56~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_7bf4cff40982401d941b39f108b99d56~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161201.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161201.jpg",
@@ -1733,21 +1694,9 @@
       "f": "Kantai",
       "c": "Space IX",
       "s": "space-ix",
-      "r": "9S161202",
-      "u": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
-      "source_resolved": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
-      "original": "imagens/kantai/space-ix/originals/9S161202.jpg",
-      "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161202.jpg",
-      "width": 990,
-      "height": 990,
-      "status": "ready"
-    },
-    {
-      "f": "Kantai",
-      "c": "Space IX",
-      "s": "space-ix",
       "r": "9S161203",
       "u": "https://static.wixstatic.com/media/3a4455_98a9cc453b374debb66e6ba6cf6f6e77~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_98a9cc453b374debb66e6ba6cf6f6e77~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161203.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161203.jpg",
@@ -1761,6 +1710,7 @@
       "s": "space-ix",
       "r": "9S161204",
       "u": "https://static.wixstatic.com/media/3a4455_69262a52c5034378abcf3e6a6f402743~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_69262a52c5034378abcf3e6a6f402743~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161204.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161204.jpg",
@@ -1774,6 +1724,7 @@
       "s": "space-ix",
       "r": "9S161205",
       "u": "https://static.wixstatic.com/media/3a4455_f1f00ecbe77c4187b1bce200c309cb17~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_f1f00ecbe77c4187b1bce200c309cb17~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161205.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161205.jpg",
@@ -1787,6 +1738,7 @@
       "s": "space-ix",
       "r": "9S161206",
       "u": "https://static.wixstatic.com/media/3a4455_a4d8aeb470874368bc5ec42bba3c2b37~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_a4d8aeb470874368bc5ec42bba3c2b37~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161206.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161206.jpg",
@@ -1800,6 +1752,7 @@
       "s": "space-ix",
       "r": "9S161207",
       "u": "https://static.wixstatic.com/media/3a4455_0fdba41c7121430fb256952a537011fe~mv2.jpg",
+      "crop": null,
       "source_resolved": "https://static.wixstatic.com/media/3a4455_0fdba41c7121430fb256952a537011fe~mv2.jpg",
       "original": "imagens/kantai/space-ix/originals/9S161207.jpg",
       "thumbnail": "imagens/kantai/space-ix/thumbnails/9S161207.jpg",
@@ -3014,6 +2967,22 @@
       "c": "Biomas",
       "s": "biomas",
       "r": "83530",
+      "status": "not_found",
+      "error": "clean-hf-source-not-found"
+    },
+    {
+      "f": "Home Finish",
+      "c": "Bosque da Imaginação",
+      "s": "bosque-da-imaginacao",
+      "r": "80706",
+      "status": "not_found",
+      "error": "clean-hf-source-not-found"
+    },
+    {
+      "f": "Home Finish",
+      "c": "Bosque da Imaginação",
+      "s": "bosque-da-imaginacao",
+      "r": "81154",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
     },
@@ -7002,18 +6971,80 @@
       "error": "clean-hf-source-not-found"
     },
     {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
-      "r": "TAC-WK205102",
-      "page": null,
-      "status": "not_found"
+      "f": "Kantai",
+      "c": "Aditare 3",
+      "s": "aditare-3",
+      "r": "AD300008R",
+      "u": "https://static.wixstatic.com/media/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_21db46a071d14ba6b6f5906d83cd924e~mv2.jpg",
+      "crop": "kt",
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "f": "Kantai",
+      "c": "Aditare 3",
+      "s": "aditare-3",
+      "r": "AD300605R",
+      "u": "https://static.wixstatic.com/media/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_5dd0e79292e9472483a7692e96723ad8~mv2.jpg",
+      "crop": "kt",
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "f": "Kantai",
+      "c": "Criativo 3",
+      "s": "criativo-3",
+      "r": "CR333715R",
+      "u": "https://static.wixstatic.com/media/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_851a581a03d7430b8d88adb8623e5ca9~mv2.jpg",
+      "crop": "kt",
+      "status": "not_found",
+      "error": "blank-image-rejected"
+    },
+    {
+      "f": "Kantai",
+      "c": "Poet Chart 5",
+      "s": "poet-chart-5",
+      "r": "PT500705",
+      "u": "https://static.wixstatic.com/media/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_8049a6698acf4db9a8262b718d501796~mv2.jpg",
+      "crop": "top-half",
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "f": "Kantai",
+      "c": "Poet Chart 5",
+      "s": "poet-chart-5",
+      "r": "PT501101",
+      "u": "https://static.wixstatic.com/media/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg/v1/fill/w_900,h_900,q_90/3a4455_597fa8b8a2664be3bded40fbb0ca8d3b~mv2.jpg",
+      "crop": "top-half",
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "f": "Kantai",
+      "c": "Space IX",
+      "s": "space-ix",
+      "r": "9S161008",
+      "u": "https://static.wixstatic.com/media/3a4455_70f180592ebc4a1a94a38162d3af49f6~mv2.jpg",
+      "crop": null,
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+    },
+    {
+      "f": "Kantai",
+      "c": "Space IX",
+      "s": "space-ix",
+      "r": "9S161202",
+      "u": "https://static.wixstatic.com/media/3a4455_04fdd271304d4261a65c7c4cac6add36~mv2.jpg",
+      "crop": null,
+      "status": "not_found",
+      "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
     },
     {
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WK205107",
+      "r": "TAC-WK205102",
       "page": null,
       "status": "not_found"
     },
@@ -7029,7 +7060,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA67601",
+      "r": "TAC-WK205107",
       "page": null,
       "status": "not_found"
     },
@@ -7037,7 +7068,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA67603",
+      "r": "TAC-WKA67601",
       "page": null,
       "status": "not_found"
     },
@@ -7053,7 +7084,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA69101",
+      "r": "TAC-WKA67603",
       "page": null,
       "status": "not_found"
     },
@@ -7061,7 +7092,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA69103",
+      "r": "TAC-WKA69101",
       "page": null,
       "status": "not_found"
     },
@@ -7077,7 +7108,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76002",
+      "r": "TAC-WKA69103",
       "page": null,
       "status": "not_found"
     },
@@ -7093,7 +7124,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76101",
+      "r": "TAC-WKA76002",
       "page": null,
       "status": "not_found"
     },
@@ -7101,7 +7132,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA76103",
+      "r": "TAC-WKA76101",
       "page": null,
       "status": "not_found"
     },
@@ -7117,7 +7148,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77901",
+      "r": "TAC-WKA76103",
       "page": null,
       "status": "not_found"
     },
@@ -7125,7 +7156,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77903",
+      "r": "TAC-WKA77901",
       "page": null,
       "status": "not_found"
     },
@@ -7141,7 +7172,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA77905",
+      "r": "TAC-WKA77903",
       "page": null,
       "status": "not_found"
     },
@@ -7157,7 +7188,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78301",
+      "r": "TAC-WKA77905",
       "page": null,
       "status": "not_found"
     },
@@ -7165,7 +7196,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78303",
+      "r": "TAC-WKA78301",
       "page": null,
       "status": "not_found"
     },
@@ -7181,7 +7212,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78305",
+      "r": "TAC-WKA78303",
       "page": null,
       "status": "not_found"
     },
@@ -7197,7 +7228,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78307",
+      "r": "TAC-WKA78305",
       "page": null,
       "status": "not_found"
     },
@@ -7213,6 +7244,14 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
+      "r": "TAC-WKA78307",
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
       "r": "TAC-WKA78501",
       "page": null,
       "status": "not_found"
@@ -7221,7 +7260,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78503",
+      "r": "TAC-WKA78502",
       "page": null,
       "status": "not_found"
     },
@@ -7229,7 +7268,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78502",
+      "r": "TAC-WKA78503",
       "page": null,
       "status": "not_found"
     },
@@ -7253,14 +7292,6 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78703",
-      "page": null,
-      "status": "not_found"
-    },
-    {
-      "f": "Wiler",
-      "c": "Tacto",
-      "s": "tacto",
       "r": "TAC-WKA78702",
       "page": null,
       "status": "not_found"
@@ -7269,7 +7300,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78705",
+      "r": "TAC-WKA78703",
       "page": null,
       "status": "not_found"
     },
@@ -7285,7 +7316,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78707",
+      "r": "TAC-WKA78705",
       "page": null,
       "status": "not_found"
     },
@@ -7301,7 +7332,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78710",
+      "r": "TAC-WKA78707",
       "page": null,
       "status": "not_found"
     },
@@ -7317,7 +7348,7 @@
       "f": "Wiler",
       "c": "Tacto",
       "s": "tacto",
-      "r": "TAC-WKA78712",
+      "r": "TAC-WKA78710",
       "page": null,
       "status": "not_found"
     },
@@ -7326,6 +7357,14 @@
       "c": "Tacto",
       "s": "tacto",
       "r": "TAC-WKA78711",
+      "page": null,
+      "status": "not_found"
+    },
+    {
+      "f": "Wiler",
+      "c": "Tacto",
+      "s": "tacto",
+      "r": "TAC-WKA78712",
       "page": null,
       "status": "not_found"
     },
