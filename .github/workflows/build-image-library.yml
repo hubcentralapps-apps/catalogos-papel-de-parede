@@ -6,6 +6,7 @@ on:
     paths:
       - 'dados/colecoes/**'
       - 'scripts/build_library.py'
+      - 'scripts/build_library_v2.py'
       - 'scripts/build_wiler.py'
       - 'staging/**'
       - '.github/workflows/build-image-library.yml'
@@ -35,7 +36,7 @@ jobs:
               rm "$archive"
             done
           fi
-      - run: python scripts/build_library.py
+      - run: python scripts/build_library_v2.py
       - run: python scripts/build_wiler.py
       - name: Commit generated library
         run: |
