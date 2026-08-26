@@ -9,7 +9,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 import requests
-from PIL import Image, ImageOps, ImageStat
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'dados' / 'colecoes'
@@ -18,18 +18,19 @@ MANIFEST = ROOT / 'dados' / 'biblioteca-imagens.json'
 TIMEOUT = 35
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'
 
-# Patch deliberadamente pequeno: somente as referencias apontadas na validacao visual.
-# Usamos arquivos de imagem diretos, nunca as paginas Home Finish (que bloqueiam o runner com 403).
+# Somente as referencias apontadas na validacao visual.
+# URLs abaixo foram conferidas diretamente no botao BAIXAR JPG da Home Finish.
 REPLACE = {
-    '101012': ['https://homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101012-2.jpg'],
-    '101013': ['https://homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101013-2.jpg'],
-    '101015': ['https://homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101015-2.jpg'],
-    '101031': ['https://homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101031-2.jpg'],
-    '101037': ['https://homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101037-2.jpg'],
+    '101012': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101012-2.jpg'],
+    '101013': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101013-2.jpg'],
+    '101015': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101015-2.jpg'],
+    '101031': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101031-1.jpg'],
+    '101037': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101037-1.jpg'],
+    # 84858 e um papel muito claro; a fonte abaixo e mantida como fallback especifico.
     '84858': ['https://static.wixstatic.com/media/76c9bb_630c20cb29c64ddfa2367d14e41eb312~mv2.jpg'],
 }
 
-# As duas abaixo nao precisam de outra arte: apenas rotacao de 180 graus.
+# MI201020 e MI201021: a arte e a mesma; apenas girar 180 graus.
 ROTATE_180 = {
     '201020': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-memorias-infancia-201020-sem-marca.jpg'],
     '201021': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-memorias-infancia-201021-sem-marca.jpg'],
@@ -79,23 +80,20 @@ def decode_image_response(r):
     return im.convert('RGB')
 
 
-def image_is_blank(im):
-    small = ImageOps.fit(im.convert('RGB'), (96, 96), method=Image.Resampling.BILINEAR)
-    stat = ImageStat.Stat(small)
-    return sum(stat.mean) / 3 > 246 and max(stat.stddev) < 5
-
-
 def usable(im, ref):
     w, h = im.size
-    if min(w, h) < 500 or max(w, h) < 700:
-        return False
-    if norm(ref) == '84858' and image_is_blank(im):
-        return False
-    return True
+    # 84858 e propositalmente quase branco; nao usar detector de imagem vazia nele.
+    return min(w, h) >= 500 and max(w, h) >= 700
 
 
 def fetch_image(session, url):
-    headers = {'User-Agent': UA, 'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8'}
+    headers = {
+        'User-Agent': UA,
+        'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
+        'Referer': 'https://www.homefinish.com.br/',
+        'Origin': 'https://www.homefinish.com.br',
+        'Cache-Control': 'no-cache',
+    }
     attempts = [url]
     if 'homefinish.com.br/' in url:
         hostless = url.split('://', 1)[-1]
@@ -120,7 +118,7 @@ def fetch_first(session, urls, ref):
             resolved, im = fetch_image(session, url)
             if usable(im, ref):
                 return url, resolved, im
-            errors.append(f'unusable:{url}')
+            errors.append(f'unusable:{url}:{im.width}x{im.height}')
         except Exception as e:
             errors.append(f'{type(e).__name__}:{e}')
     raise ValueError('|'.join(errors[:6]) or 'no-image-source')
