@@ -1,0 +1,23 @@
+name: Export Kantai images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/export-kantai.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload Kantai originals
+        uses: actions/upload-artifact@v4
+        with:
+          name: kantai-originals
+          path: imagens/kantai/**/originals/*.jpg
+          if-no-files-found: error
+          retention-days: 1
