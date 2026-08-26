@@ -5,35 +5,29 @@ import gzip
 import io
 import json
 import re
+import subprocess
+import zipfile
 from pathlib import Path
-from urllib.parse import quote
 
-import requests
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'dados' / 'colecoes'
 OUT = ROOT / 'imagens' / 'home-finish'
 MANIFEST = ROOT / 'dados' / 'biblioteca-imagens.json'
-TIMEOUT = 35
-UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'
+STAGING_ZIP = ROOT / 'staging' / 'home_finish_patch_load.zip'
+UPLOAD_COMMIT = '11cc6677f24a3c0c8968388cbcbcf0af3cd6f438'
 
-# Somente as referencias apontadas na validacao visual.
-# URLs abaixo foram conferidas diretamente no botao BAIXAR JPG da Home Finish.
-REPLACE = {
-    '101012': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101012-2.jpg'],
-    '101013': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101013-2.jpg'],
-    '101015': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101015-2.jpg'],
-    '101031': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101031-1.jpg'],
-    '101037': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-bio-habitat-101037-1.jpg'],
-    # 84858 e um papel muito claro; a fonte abaixo e mantida como fallback especifico.
-    '84858': ['https://static.wixstatic.com/media/76c9bb_630c20cb29c64ddfa2367d14e41eb312~mv2.jpg'],
-}
-
-# MI201020 e MI201021: a arte e a mesma; apenas girar 180 graus.
-ROTATE_180 = {
-    '201020': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-memorias-infancia-201020-sem-marca.jpg'],
-    '201021': ['https://www.homefinish.com.br/wp-content/uploads/2023/08/papel-parede-nacional-home-finish-memorias-infancia-201021-sem-marca.jpg'],
+# Arquivos enviados pela cliente e validados visualmente.
+# As duas MI ja vieram na orientacao correta: NAO girar novamente.
+TARGETS = {
+    '101012': 'BH101012.jpg',
+    '101013': 'BH101013.jpg',
+    '101015': 'BH101015.jpg',
+    '101031': 'BH101031.jpg',
+    '101037': 'BH101037.jpg',
+    '201020': 'MI201020.jpg',
+    '201021': 'MI201021.jpg',
 }
 
 
@@ -69,59 +63,33 @@ def load_home_finish_records():
     return by_norm
 
 
-def decode_image_response(r):
-    if r.status_code != 200 or not r.content:
-        raise ValueError(f'not-image-{r.status_code}')
-    ctype = (r.headers.get('content-type') or '').lower()
-    if 'text/html' in ctype:
-        raise ValueError('html-instead-of-image')
-    im = Image.open(io.BytesIO(r.content))
-    im.load()
-    return im.convert('RGB')
+def load_zip_bytes():
+    if STAGING_ZIP.exists():
+        print(f'PATCH ZIP current:{STAGING_ZIP.relative_to(ROOT)}', flush=True)
+        return STAGING_ZIP.read_bytes()
+    # O workflow normal remove o ZIP de staging; recuperamos exatamente o upload do commit historico.
+    spec = f'{UPLOAD_COMMIT}:staging/home_finish_patch_load.zip'
+    print(f'PATCH ZIP history:{spec}', flush=True)
+    return subprocess.check_output(['git', 'show', spec])
 
 
-def usable(im, ref):
-    w, h = im.size
-    # 84858 e propositalmente quase branco; nao usar detector de imagem vazia nele.
-    return min(w, h) >= 500 and max(w, h) >= 700
-
-
-def fetch_image(session, url):
-    headers = {
-        'User-Agent': UA,
-        'Accept': 'image/avif,image/webp,image/apng,image/*,*/*;q=0.8',
-        'Referer': 'https://www.homefinish.com.br/',
-        'Origin': 'https://www.homefinish.com.br',
-        'Cache-Control': 'no-cache',
-    }
-    attempts = [url]
-    if 'homefinish.com.br/' in url:
-        hostless = url.split('://', 1)[-1]
-        attempts += [
-            'https://images.weserv.nl/?url=' + quote(hostless, safe='/:?=&%'),
-            'https://wsrv.nl/?url=' + quote(url, safe=':/?=&%'),
-        ]
-    last = None
-    for candidate in attempts:
+def open_uploaded_original(zf, filename):
+    candidates = [
+        f'home_finish_patch_load/originals/{filename}',
+        f'originals/{filename}',
+    ]
+    for name in candidates:
         try:
-            r = session.get(candidate, timeout=TIMEOUT, allow_redirects=True, headers=headers)
-            return candidate, decode_image_response(r)
-        except Exception as e:
-            last = e
-    raise last or ValueError('image-fetch-failed')
-
-
-def fetch_first(session, urls, ref):
-    errors = []
-    for url in urls:
-        try:
-            resolved, im = fetch_image(session, url)
-            if usable(im, ref):
-                return url, resolved, im
-            errors.append(f'unusable:{url}:{im.width}x{im.height}')
-        except Exception as e:
-            errors.append(f'{type(e).__name__}:{e}')
-    raise ValueError('|'.join(errors[:6]) or 'no-image-source')
+            raw = zf.read(name)
+            im = Image.open(io.BytesIO(raw))
+            im.load()
+            im = im.convert('RGB')
+            if min(im.size) < 500:
+                raise ValueError(f'image-too-small:{im.size}')
+            return name, im
+        except KeyError:
+            pass
+    raise FileNotFoundError(filename)
 
 
 def save_pair(im, rec):
@@ -133,22 +101,11 @@ def save_pair(im, rec):
     td.mkdir(parents=True, exist_ok=True)
     op = od / f'{ref}.jpg'
     tp = td / f'{ref}.jpg'
-    im.save(op, 'JPEG', quality=94, optimize=True, progressive=True)
+    im.save(op, 'JPEG', quality=95, optimize=True, progressive=True)
     ImageOps.fit(im, (520, 520), method=Image.Resampling.LANCZOS, centering=(0.5, 0.5)).save(
         tp, 'JPEG', quality=86, optimize=True, progressive=True
     )
     return op, tp
-
-
-def find_existing_original(rec):
-    expected = OUT / rec['s'] / 'originals' / f"{rec['r']}.jpg"
-    if expected.exists():
-        return expected
-    target_norm = norm(rec['r'])
-    for p in OUT.glob('*/originals/*.jpg'):
-        if norm(p.stem) == target_norm:
-            return p
-    return None
 
 
 def patch_item(rec, im, source):
@@ -167,56 +124,46 @@ def patch_item(rec, im, source):
 
 def main():
     records = load_home_finish_records()
+    missing_records = [t for t in TARGETS if t not in records]
+    if missing_records:
+        raise RuntimeError('records-not-found:' + ','.join(missing_records))
+
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8')) if MANIFEST.exists() else {'items': [], 'failures': []}
     items = manifest.get('items', [])
     failures = manifest.get('failures', [])
     by_key = {(x.get('f'), x.get('c'), str(x.get('r'))): x for x in items}
     successes = set()
-    session = requests.Session()
 
-    for target, urls in REPLACE.items():
-        rec = records.get(target)
-        if not rec:
-            print(f'PATCH FAIL Home Finish {target}: record-not-found', flush=True)
-            continue
-        try:
-            canonical, resolved, im = fetch_first(session, urls, rec['r'])
-            by_key[(rec['f'], rec['c'], str(rec['r']))] = patch_item(rec, im, canonical)
+    zip_bytes = load_zip_bytes()
+    with zipfile.ZipFile(io.BytesIO(zip_bytes)) as zf:
+        for target, filename in TARGETS.items():
+            rec = records[target]
+            source_name, im = open_uploaded_original(zf, filename)
+            by_key[(rec['f'], rec['c'], str(rec['r']))] = patch_item(
+                rec, im, f'user-upload:{UPLOAD_COMMIT}:{source_name}'
+            )
             successes.add(target)
-            print(f'PATCH READY Home Finish {rec["r"]} {im.width}x{im.height} via {resolved}', flush=True)
-        except Exception as e:
-            print(f'PATCH KEEP Home Finish {rec["r"]}: {e}', flush=True)
+            print(f'PATCH READY Home Finish {rec["r"]} {im.width}x{im.height} from {filename}', flush=True)
 
-    for target, fallback_urls in ROTATE_180.items():
-        rec = records.get(target)
-        if not rec:
-            print(f'ROTATE FAIL Home Finish {target}: record-not-found', flush=True)
-            continue
-        try:
-            src = find_existing_original(rec)
-            if src:
-                im = Image.open(src)
-                im.load()
-                source = f'rotated-existing:{src.relative_to(ROOT)}'
-            else:
-                canonical, resolved, im = fetch_first(session, fallback_urls, rec['r'])
-                source = f'rotated-restored:{canonical}'
-            im = im.convert('RGB').rotate(180, expand=False)
-            by_key[(rec['f'], rec['c'], str(rec['r']))] = patch_item(rec, im, source)
-            successes.add(target)
-            print(f'ROTATE READY Home Finish {rec["r"]} 180deg', flush=True)
-        except Exception as e:
-            print(f'ROTATE KEEP Home Finish {rec["r"]}: {e}', flush=True)
+    if successes != set(TARGETS):
+        raise RuntimeError(f'patch-incomplete:{len(successes)}/{len(TARGETS)}')
 
     new_items = list(by_key.values())
-    new_failures = [x for x in failures if not (x.get('f') == 'Home Finish' and norm(x.get('r')) in successes)]
+    new_failures = [
+        x for x in failures
+        if not (x.get('f') == 'Home Finish' and norm(x.get('r')) in successes)
+    ]
     new_items.sort(key=lambda x: (x.get('f', ''), x.get('c', ''), str(x.get('r', ''))))
     new_failures.sort(key=lambda x: (x.get('f', ''), x.get('c', ''), str(x.get('r', ''))))
     MANIFEST.write_text(
-        json.dumps({'ready': len(new_items), 'failed': len(new_failures), 'items': new_items, 'failures': new_failures}, ensure_ascii=False, indent=2),
+        json.dumps(
+            {'ready': len(new_items), 'failed': len(new_failures), 'items': new_items, 'failures': new_failures},
+            ensure_ascii=False,
+            indent=2,
+        ),
         encoding='utf-8',
     )
-    print('PATCH SUMMARY ' + ','.join(sorted(successes)) + f' success={len(successes)}/8', flush=True)
+    print('PATCH SUMMARY ' + ','.join(sorted(successes)) + f' success={len(successes)}/7', flush=True)
 
 
 if __name__ == '__main__':
