@@ -17,7 +17,21 @@ permissions:
   contents: write
 
 jobs:
+  export_kantai:
+    if: contains(github.event.head_commit.message, '[KANTAI EXPORT]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload Kantai originals
+        uses: actions/upload-artifact@v4
+        with:
+          name: kantai-originals
+          path: imagens/kantai/**/originals/*.jpg
+          if-no-files-found: error
+          retention-days: 1
+
   build:
+    if: ${{ !contains(github.event.head_commit.message, '[KANTAI EXPORT]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
