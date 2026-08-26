@@ -493,7 +493,8 @@
       "width": 772,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Kantai",
