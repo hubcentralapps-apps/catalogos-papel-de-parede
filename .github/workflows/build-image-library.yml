@@ -11,6 +11,8 @@ on:
       - 'scripts/patch_home_finish.py'
       - 'staging/**'
       - '.github/workflows/build-image-library.yml'
+  issues:
+    types: [opened]
   workflow_dispatch:
 
 permissions:
@@ -18,7 +20,7 @@ permissions:
 
 jobs:
   export_kantai:
-    if: contains(github.event.head_commit.message, '[KANTAI EXPORT]')
+    if: github.event_name == 'issues' || contains(github.event.head_commit.message, '[KANTAI EXPORT]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,7 +33,7 @@ jobs:
           retention-days: 1
 
   build:
-    if: ${{ !contains(github.event.head_commit.message, '[KANTAI EXPORT]') }}
+    if: github.event_name == 'push' && !contains(github.event.head_commit.message, '[KANTAI EXPORT]')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
