@@ -13,7 +13,8 @@
       "width": 1024,
       "height": 639,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -26,7 +27,8 @@
       "width": 1024,
       "height": 639,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -39,7 +41,8 @@
       "width": 721,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -52,7 +55,8 @@
       "width": 696,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -65,7 +69,8 @@
       "width": 1157,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -572,7 +577,8 @@
       "width": 1210,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Home Finish",
@@ -585,7 +591,8 @@
       "width": 1210,
       "height": 1080,
       "status": "ready",
-      "patched": true
+      "patched": true,
+      "kept_after_error": "clean-hf-source-not-found"
     },
     {
       "f": "Kantai",
