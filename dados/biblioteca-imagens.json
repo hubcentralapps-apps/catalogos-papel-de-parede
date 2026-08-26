@@ -1,7 +1,72 @@
 {
-  "ready": 181,
-  "failed": 631,
+  "ready": 188,
+  "failed": 624,
   "items": [
+    {
+      "f": "Home Finish",
+      "c": "BIO Habitat",
+      "s": "bio-habitat",
+      "r": "101012",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/BH101012.jpg",
+      "original": "imagens/home-finish/bio-habitat/originals/101012.jpg",
+      "thumbnail": "imagens/home-finish/bio-habitat/thumbnails/101012.jpg",
+      "width": 1024,
+      "height": 639,
+      "status": "ready",
+      "patched": true
+    },
+    {
+      "f": "Home Finish",
+      "c": "BIO Habitat",
+      "s": "bio-habitat",
+      "r": "101013",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/BH101013.jpg",
+      "original": "imagens/home-finish/bio-habitat/originals/101013.jpg",
+      "thumbnail": "imagens/home-finish/bio-habitat/thumbnails/101013.jpg",
+      "width": 1024,
+      "height": 639,
+      "status": "ready",
+      "patched": true
+    },
+    {
+      "f": "Home Finish",
+      "c": "BIO Habitat",
+      "s": "bio-habitat",
+      "r": "101015",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/BH101015.jpg",
+      "original": "imagens/home-finish/bio-habitat/originals/101015.jpg",
+      "thumbnail": "imagens/home-finish/bio-habitat/thumbnails/101015.jpg",
+      "width": 721,
+      "height": 1080,
+      "status": "ready",
+      "patched": true
+    },
+    {
+      "f": "Home Finish",
+      "c": "BIO Habitat",
+      "s": "bio-habitat",
+      "r": "101031",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/BH101031.jpg",
+      "original": "imagens/home-finish/bio-habitat/originals/101031.jpg",
+      "thumbnail": "imagens/home-finish/bio-habitat/thumbnails/101031.jpg",
+      "width": 696,
+      "height": 1080,
+      "status": "ready",
+      "patched": true
+    },
+    {
+      "f": "Home Finish",
+      "c": "BIO Habitat",
+      "s": "bio-habitat",
+      "r": "101037",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/BH101037.jpg",
+      "original": "imagens/home-finish/bio-habitat/originals/101037.jpg",
+      "thumbnail": "imagens/home-finish/bio-habitat/thumbnails/101037.jpg",
+      "width": 1157,
+      "height": 1080,
+      "status": "ready",
+      "patched": true
+    },
     {
       "f": "Home Finish",
       "c": "Bosque da Imaginação",
@@ -495,6 +560,32 @@
       "status": "ready",
       "patched": true,
       "kept_after_error": "clean-hf-source-not-found"
+    },
+    {
+      "f": "Home Finish",
+      "c": "Memórias de Infância",
+      "s": "memorias-de-infancia",
+      "r": "MI201020",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/MI201020.jpg",
+      "original": "imagens/home-finish/memorias-de-infancia/originals/MI201020.jpg",
+      "thumbnail": "imagens/home-finish/memorias-de-infancia/thumbnails/MI201020.jpg",
+      "width": 1210,
+      "height": 1080,
+      "status": "ready",
+      "patched": true
+    },
+    {
+      "f": "Home Finish",
+      "c": "Memórias de Infância",
+      "s": "memorias-de-infancia",
+      "r": "MI201021",
+      "source_resolved": "user-upload:11cc6677f24a3c0c8968388cbcbcf0af3cd6f438:home_finish_patch_load/originals/MI201021.jpg",
+      "original": "imagens/home-finish/memorias-de-infancia/originals/MI201021.jpg",
+      "thumbnail": "imagens/home-finish/memorias-de-infancia/thumbnails/MI201021.jpg",
+      "width": 1210,
+      "height": 1080,
+      "status": "ready",
+      "patched": true
     },
     {
       "f": "Kantai",
@@ -2478,31 +2569,7 @@
       "f": "Home Finish",
       "c": "BIO Habitat",
       "s": "bio-habitat",
-      "r": "101012",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "BIO Habitat",
-      "s": "bio-habitat",
-      "r": "101013",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "BIO Habitat",
-      "s": "bio-habitat",
       "r": "101014",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "BIO Habitat",
-      "s": "bio-habitat",
-      "r": "101015",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
     },
@@ -2614,14 +2681,6 @@
       "f": "Home Finish",
       "c": "BIO Habitat",
       "s": "bio-habitat",
-      "r": "101031",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "BIO Habitat",
-      "s": "bio-habitat",
       "r": "101032",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
@@ -2655,14 +2714,6 @@
       "c": "BIO Habitat",
       "s": "bio-habitat",
       "r": "101036",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "BIO Habitat",
-      "s": "bio-habitat",
-      "r": "101037",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
     },
@@ -5007,22 +5058,6 @@
       "c": "Memórias de Infância",
       "s": "memorias-de-infancia",
       "r": "MI201019",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Memórias de Infância",
-      "s": "memorias-de-infancia",
-      "r": "MI201020",
-      "status": "not_found",
-      "error": "clean-hf-source-not-found"
-    },
-    {
-      "f": "Home Finish",
-      "c": "Memórias de Infância",
-      "s": "memorias-de-infancia",
-      "r": "MI201021",
       "status": "not_found",
       "error": "clean-hf-source-not-found"
     },
