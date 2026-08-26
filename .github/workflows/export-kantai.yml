@@ -21,3 +21,5 @@ jobs:
           path: imagens/kantai/**/originals/*.jpg
           if-no-files-found: error
           retention-days: 1
+
+# trigger export
