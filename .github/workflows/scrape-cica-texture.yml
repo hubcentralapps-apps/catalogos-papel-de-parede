@@ -1,0 +1,140 @@
+name: Scrape Cica Texture II images
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: read
+
+jobs:
+  scrape:
+    if: startsWith(github.event.issue.title, '[scrape-cica-texture]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: python -m pip install --quiet requests beautifulsoup4 pillow
+      - name: Download Texture II images
+        shell: bash
+        run: |
+          cat > /tmp/scrape.py <<'PY'
+          import csv, io, os, re, sys, zipfile
+          from pathlib import Path
+          from urllib.parse import urljoin, urlparse
+          import requests
+          from bs4 import BeautifulSoup
+          from PIL import Image
+
+          BASE='https://www.cicabragapapeldeparede.com.br'
+          COLLECTION=BASE+'/papel-de-parede1/papel-de-parede-texture-ii/'
+          OUT=Path('cica-texture-ii')
+          OUT.mkdir(exist_ok=True)
+          S=requests.Session()
+          S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'})
+
+          def get(url):
+              r=S.get(url,timeout=45,allow_redirects=True)
+              r.raise_for_status()
+              return r
+
+          product_urls=set()
+          for mpage in range(1,7):
+              url=COLLECTION+f'?mpage={mpage}'
+              try:
+                  html=get(url).text
+              except Exception as e:
+                  print('COLLECTION_FAIL',url,e)
+                  continue
+              soup=BeautifulSoup(html,'html.parser')
+              for a in soup.find_all('a',href=True):
+                  href=urljoin(BASE,a['href'])
+                  if '/produtos/' in href and 'texture-ii' in href.lower():
+                      product_urls.add(href.split('?')[0])
+              # Regex fallback
+              for m in re.findall(r'https?://[^\"\'\s<>]+/produtos/[^\"\'\s<>]+', html):
+                  if 'texture-ii' in m.lower(): product_urls.add(m.split('?')[0])
+              for m in re.findall(r'href=[\"\']([^\"\']*/produtos/[^\"\']+)[\"\']', html, re.I):
+                  href=urljoin(BASE,m)
+                  if 'texture-ii' in href.lower(): product_urls.add(href.split('?')[0])
+              print('MPAGE',mpage,'products_so_far',len(product_urls))
+
+          # Ensure all known TX codes are attempted via site search endpoint if collection paging misses any.
+          # We expect TX-2001..TX-2051; product URLs are usually discoverable from collection HTML.
+          rows=[]
+          seen_img=set()
+          for idx,purl in enumerate(sorted(product_urls),1):
+              try:
+                  r=get(purl); html=r.text
+              except Exception as e:
+                  rows.append(['',purl,'','',f'PAGE_FAIL:{e}'])
+                  continue
+              sku_m=re.search(r'\bTX[- ]?(20\d{2})\b',html,re.I)
+              if not sku_m:
+                  sku_m=re.search(r'\bSKU:\s*TX[- ]?(20\d{2})\b',BeautifulSoup(html,'html.parser').get_text(' ',strip=True),re.I)
+              code='TX-'+sku_m.group(1) if sku_m else 'SEM-CODIGO'
+              folder=OUT/code
+              folder.mkdir(exist_ok=True)
+              urls=[]
+              # pull CDN URLs from src/srcset/data-src and raw HTML
+              soup=BeautifulSoup(html,'html.parser')
+              for tag in soup.find_all(['img','source']):
+                  for attr in ('src','data-src','data-srcset','srcset'):
+                      v=tag.get(attr)
+                      if not v: continue
+                      for part in str(v).split(','):
+                          u=part.strip().split(' ')[0]
+                          if u.startswith('//'): u='https:'+u
+                          if u.startswith('http') and 'mitiendanube.com' in u and '/products/' in u:
+                              urls.append(u)
+              urls += re.findall(r'https?://[^\"\'\s<>]+mitiendanube\.com[^\"\'\s<>]+',html,re.I)
+              # keep product-media URLs; dedupe preserving order
+              clean=[]
+              for u in urls:
+                  u=u.replace('&amp;','&')
+                  if '/products/' not in u: continue
+                  # Strip query and trailing punctuation
+                  u=u.split('?')[0].rstrip(')\\\'\"')
+                  if u not in clean: clean.append(u)
+              # Prefer urls whose filename begins with product number where possible
+              num=code.replace('TX-','')
+              preferred=[u for u in clean if f'/{num}_' in u or f'/{num}-' in u]
+              if preferred: clean=preferred
+              print(idx,'/',len(product_urls),code,'images',len(clean),purl)
+              for j,u in enumerate(clean,1):
+                  key=(code,u)
+                  if key in seen_img: continue
+                  seen_img.add(key)
+                  try:
+                      rr=get(u)
+                      ctype=rr.headers.get('content-type','')
+                      ext='.webp'
+                      if 'jpeg' in ctype or 'jpg' in ctype: ext='.jpg'
+                      elif 'png' in ctype: ext='.png'
+                      elif 'webp' in ctype: ext='.webp'
+                      # Determine dimensions
+                      try:
+                          im=Image.open(io.BytesIO(rr.content)); dims=f'{im.width}x{im.height}'
+                      except Exception:
+                          dims=''
+                      fname=f'{code}_{j:02d}{ext}'
+                      (folder/fname).write_bytes(rr.content)
+                      rows.append([code,purl,u,fname,dims])
+                  except Exception as e:
+                      rows.append([code,purl,u,'',f'IMG_FAIL:{e}'])
+
+          with open(OUT/'manifest.csv','w',newline='',encoding='utf-8-sig') as f:
+              w=csv.writer(f); w.writerow(['codigo','produto_url','imagem_url','arquivo','dimensoes']); w.writerows(rows)
+          summary=f'products={len(product_urls)} images_ok={sum(1 for r in rows if r[3])} rows={len(rows)}\n'
+          (OUT/'RESUMO.txt').write_text(summary,encoding='utf-8')
+          print(summary)
+          if not product_urls:
+              raise SystemExit('No product URLs found')
+          PY
+          python /tmp/scrape.py
+      - name: Upload images artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cica-texture-ii-images
+          path: cica-texture-ii/
+          if-no-files-found: error
+          retention-days: 2
