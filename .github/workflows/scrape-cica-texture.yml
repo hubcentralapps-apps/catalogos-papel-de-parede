@@ -20,84 +20,55 @@ jobs:
           cat > /tmp/scrape.py <<'PY'
           import csv, io, re
           from pathlib import Path
-          from urllib.parse import urljoin
           import requests
           from bs4 import BeautifulSoup
           from PIL import Image
 
           BASE='https://www.cicabragapapeldeparede.com.br'
-          COLLECTION=BASE+'/papel-de-parede1/papel-de-parede-texture-ii/'
           OUT=Path('cica-texture-ii')
           OUT.mkdir(exist_ok=True)
           S=requests.Session()
           S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'})
 
           def get(url):
-              r=S.get(url,timeout=45,allow_redirects=True)
+              r=S.get(url,timeout=25,allow_redirects=True)
               r.raise_for_status()
               return r
 
           product_urls=set()
+          # Enumerate product URLs from sitemap(s)
+          queue=[BASE+'/sitemap.xml', BASE+'/sitemap_index.xml']
+          seen=set()
+          while queue and len(seen)<30:
+              su=queue.pop(0)
+              if su in seen: continue
+              seen.add(su)
+              try: txt=get(su).text
+              except Exception: continue
+              locs=[x.strip().replace('&amp;','&') for x in re.findall(r'<loc>(.*?)</loc>',txt,re.I|re.S)]
+              for u in locs:
+                  if u.endswith('.xml') and u not in seen: queue.append(u)
+                  elif '/produtos/' in u and 'texture-ii' in u.lower(): product_urls.add(u.split('?')[0])
 
-          # 1) Sitemap: most reliable way to enumerate all products.
-          sitemap_candidates=[BASE+'/sitemap.xml',BASE+'/sitemap_index.xml']
-          sitemap_urls=[]
-          for su in sitemap_candidates:
-              try:
-                  txt=get(su).text
-              except Exception:
-                  continue
-              locs=re.findall(r'<loc>(.*?)</loc>',txt,re.I|re.S)
-              if any(x.endswith('.xml') for x in locs):
-                  sitemap_urls.extend([x for x in locs if x.endswith('.xml')])
-              else:
-                  sitemap_urls.append(su)
-          seen_maps=set()
-          for su in sitemap_urls[:50]:
-              if su in seen_maps: continue
-              seen_maps.add(su)
-              try:
-                  txt=get(su).text
-              except Exception as e:
-                  print('SITEMAP_FAIL',su,e)
-                  continue
-              for loc in re.findall(r'<loc>(.*?)</loc>',txt,re.I|re.S):
-                  u=loc.strip().replace('&amp;','&')
-                  if '/produtos/' in u and 'texture-ii' in u.lower():
-                      product_urls.add(u.split('?')[0])
-          print('SITEMAP products',len(product_urls))
-
-          # 2) Collection fallback.
-          for mpage in range(1,7):
-              url=COLLECTION+f'?mpage={mpage}'
-              try:
-                  html=get(url).text
-              except Exception as e:
-                  print('COLLECTION_FAIL',url,e)
-                  continue
-              soup=BeautifulSoup(html,'html.parser')
-              for a in soup.find_all('a',href=True):
-                  href=urljoin(BASE,a['href'])
-                  if '/produtos/' in href and 'texture-ii' in href.lower():
-                      product_urls.add(href.split('?')[0])
+          # Fallback: current collection page products
+          try:
+              html=get(BASE+'/papel-de-parede1/papel-de-parede-texture-ii/?mpage=5').text
               for m in re.findall(r'href=[\"\']([^\"\']*/produtos/[^\"\']+)[\"\']', html, re.I):
-                  href=urljoin(BASE,m)
-                  if 'texture-ii' in href.lower(): product_urls.add(href.split('?')[0])
-          print('TOTAL products',len(product_urls))
+                  u=m if m.startswith('http') else BASE+m
+                  if 'texture-ii' in u.lower(): product_urls.add(u.split('?')[0])
+          except Exception: pass
 
           rows=[]
-          seen_img=set()
-          for idx,purl in enumerate(sorted(product_urls),1):
-              try:
-                  html=get(purl).text
-              except Exception as e:
-                  rows.append(['',purl,'','',f'PAGE_FAIL:{e}'])
-                  continue
+          found_codes=set()
+          for purl in sorted(product_urls):
+              try: html=get(purl).text
+              except Exception as e: continue
               text=BeautifulSoup(html,'html.parser').get_text(' ',strip=True)
-              sku_m=re.search(r'\bTX[- ]?(20\d{2})\b',text,re.I) or re.search(r'\bTX[- ]?(20\d{2})\b',html,re.I)
-              code='TX-'+sku_m.group(1) if sku_m else 'SEM-CODIGO'
-              folder=OUT/code
-              folder.mkdir(exist_ok=True)
+              m=re.search(r'\bTX[- ]?(20\d{2})\b',text,re.I) or re.search(r'\bTX[- ]?(20\d{2})\b',html,re.I)
+              if not m: continue
+              code='TX-'+m.group(1)
+              num=m.group(1)
+              if code in found_codes: continue
               urls=[]
               soup=BeautifulSoup(html,'html.parser')
               for tag in soup.find_all(['img','source']):
@@ -108,44 +79,43 @@ jobs:
                           u=part.strip().split(' ')[0]
                           if u.startswith('//'): u='https:'+u
                           if u.startswith('http') and 'mitiendanube.com' in u and '/products/' in u:
-                              urls.append(u)
-              urls += re.findall(r'https?://[^\"\'\s<>]+mitiendanube\.com[^\"\'\s<>]+',html,re.I)
+                              u=u.split('?')[0]
+                              if u not in urls: urls.append(u)
+              urls += [u for u in re.findall(r'https?://[^\"\'\s<>]+mitiendanube\.com[^\"\'\s<>]+',html,re.I) if '/products/' in u]
               clean=[]
               for u in urls:
                   u=u.replace('&amp;','&').split('?')[0].rstrip(')\\\'\"')
-                  if '/products/' not in u: continue
                   if u not in clean: clean.append(u)
-              num=code.replace('TX-','')
-              preferred=[u for u in clean if f'/{num}_' in u or f'/{num}-' in u]
-              if preferred: clean=preferred
-              print(idx,'/',len(product_urls),code,'images',len(clean))
-              for j,u in enumerate(clean,1):
-                  key=(code,u)
-                  if key in seen_img: continue
-                  seen_img.add(key)
+              own=[u for u in clean if f'/{num}_' in u or f'/{num}-' in u]
+              if own: clean=own
+              # Prefer the straight-on catalog swatch _01; then any 640 image; then first.
+              choices=[u for u in clean if re.search(fr'/{num}_01-',u,re.I)] or [u for u in clean if '-640-0.' in u] or clean
+              if not choices: continue
+              u=choices[0]
+              try:
+                  rr=get(u)
+                  ctype=rr.headers.get('content-type','')
+                  ext='.webp'
+                  if 'jpeg' in ctype or 'jpg' in ctype: ext='.jpg'
+                  elif 'png' in ctype: ext='.png'
                   try:
-                      rr=get(u)
-                      ctype=rr.headers.get('content-type','')
-                      ext='.webp'
-                      if 'jpeg' in ctype or 'jpg' in ctype: ext='.jpg'
-                      elif 'png' in ctype: ext='.png'
-                      try:
-                          im=Image.open(io.BytesIO(rr.content)); dims=f'{im.width}x{im.height}'
-                      except Exception:
-                          dims=''
-                      fname=f'{code}_{j:02d}{ext}'
-                      (folder/fname).write_bytes(rr.content)
-                      rows.append([code,purl,u,fname,dims])
-                  except Exception as e:
-                      rows.append([code,purl,u,'',f'IMG_FAIL:{e}'])
+                      im=Image.open(io.BytesIO(rr.content)); dims=f'{im.width}x{im.height}'
+                  except Exception: dims=''
+                  fname=f'{code}{ext}'
+                  (OUT/fname).write_bytes(rr.content)
+                  rows.append([code,purl,u,fname,dims])
+                  found_codes.add(code)
+                  print('READY',code,dims,u)
+              except Exception as e:
+                  print('FAIL',code,e)
 
           with open(OUT/'manifest.csv','w',newline='',encoding='utf-8-sig') as f:
               w=csv.writer(f); w.writerow(['codigo','produto_url','imagem_url','arquivo','dimensoes']); w.writerows(rows)
-          summary=f'products={len(product_urls)} codes={len(set(r[0] for r in rows if r[0]))} images_ok={sum(1 for r in rows if r[3])} rows={len(rows)}\n'
+          codes=sorted(found_codes)
+          summary=f'products_discovered={len(product_urls)} codes_downloaded={len(codes)}\n'+'\n'.join(codes)+'\n'
           (OUT/'RESUMO.txt').write_text(summary,encoding='utf-8')
           print(summary)
-          if len(product_urls) < 40:
-              raise SystemExit(f'Only {len(product_urls)} product URLs found; expected around 49')
+          if len(codes)<40: raise SystemExit(f'Only {len(codes)} codes downloaded')
           PY
           python /tmp/scrape.py
       - name: Upload images artifact
