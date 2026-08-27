@@ -21,6 +21,7 @@ jobs:
           import io, re, csv
           from pathlib import Path
           from urllib.parse import urljoin
+          from concurrent.futures import ThreadPoolExecutor, as_completed
           import requests
           from bs4 import BeautifulSoup
           from PIL import Image
@@ -28,34 +29,23 @@ jobs:
           BASE='https://www.coelhopapeisdeparede.com.br'
           OUT=Path('coelho-tramas')
           OUT.mkdir(exist_ok=True)
-          S=requests.Session()
-          S.headers.update({'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'})
+          HEAD={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151 Safari/537.36'}
 
           def get(url):
-              r=S.get(url,timeout=45,allow_redirects=True)
+              r=requests.get(url,headers=HEAD,timeout=20,allow_redirects=True)
               r.raise_for_status()
               return r
 
-          rows=[]
-          ok=0
-          for num in range(4001, 4063):
+          def one(num):
               code=f'TR-{num}'
-              candidates=[
-                  f'{BASE}/produtos/papel-de-parede-tramas-tr-{num}/',
-                  f'{BASE}/produtos/papel-de-parede-tramas-tr-{num}',
-              ]
-              page=None; purl=None
-              for u in candidates:
-                  try:
-                      r=get(u)
-                      if r.status_code==200 and code.lower() in r.text.lower():
-                          page=r.text; purl=r.url; break
-                  except Exception:
-                      pass
-              if not page:
-                  rows.append([code,'','','PAGE_NOT_FOUND'])
-                  print(code,'PAGE_NOT_FOUND')
-                  continue
+              purl=f'{BASE}/produtos/papel-de-parede-tramas-tr-{num}/'
+              try:
+                  r=get(purl)
+                  page=r.text
+                  if code.lower() not in page.lower():
+                      return [code,purl,'','PAGE_NOT_FOUND']
+              except Exception as e:
+                  return [code,purl,'',f'PAGE_FAIL:{e}']
               soup=BeautifulSoup(page,'html.parser')
               urls=[]
               for tag in soup.find_all(['img','source']):
@@ -65,49 +55,40 @@ jobs:
                       for part in str(v).split(','):
                           u=part.strip().split(' ')[0]
                           if u.startswith('//'): u='https:'+u
-                          if u.startswith('/'):
-                              u=urljoin(BASE,u)
-                          if u.startswith('http'):
-                              urls.append(u)
-              # regex fallback
-              urls += re.findall(r'https?://[^\"\'\s<>]+', page)
-              # Keep image-like urls, prefer tienda nube cdn / products
+                          if u.startswith('/'): u=urljoin(BASE,u)
+                          if u.startswith('http'): urls.append(u)
               clean=[]
               for u in urls:
                   u=u.replace('&amp;','&').split('?')[0].rstrip(')\\\'\"')
                   low=u.lower()
-                  if not any(ext in low for ext in ('.jpg','.jpeg','.png','.webp')) and '/products/' not in low:
-                      continue
+                  if '/products/' not in low: continue
                   if u not in clean: clean.append(u)
-              preferred=[u for u in clean if '/products/' in u.lower()]
-              if preferred: clean=preferred
-              # Prefer URLs that mention code or number
               specific=[u for u in clean if str(num) in u or code.lower() in u.lower()]
               if specific: clean=specific
-
+              # Often the first product-media URL is already the largest; still compare dimensions among up to 8 URLs.
               best=None
-              for u in clean:
+              for u in clean[:8]:
                   try:
                       rr=get(u)
                       im=Image.open(io.BytesIO(rr.content))
-                      w,h=im.size
-                      area=w*h
-                      if best is None or area>best[0]:
-                          best=(area,u,rr.content,im.format,w,h)
+                      w,h=im.size; area=w*h
+                      if best is None or area>best[0]: best=(area,u,rr.content,im.format,w,h)
                   except Exception:
                       continue
               if not best:
-                  rows.append([code,purl,'','NO_IMAGE'])
-                  print(code,'NO_IMAGE')
-                  continue
+                  return [code,purl,'','NO_IMAGE']
               _,u,blob,fmt,w,h=best
               ext={'JPEG':'.jpg','PNG':'.png','WEBP':'.webp'}.get(fmt,'.jpg')
-              fname=f'{code}{ext}'
-              (OUT/fname).write_bytes(blob)
-              rows.append([code,purl,u,f'{w}x{h}'])
-              ok+=1
-              print(code,w,h,u)
+              (OUT/f'{code}{ext}').write_bytes(blob)
+              return [code,purl,u,f'{w}x{h}']
 
+          rows=[]
+          with ThreadPoolExecutor(max_workers=12) as ex:
+              futs={ex.submit(one,n):n for n in range(4001,4063)}
+              for fut in as_completed(futs):
+                  row=fut.result(); rows.append(row); print(*row)
+          rows.sort(key=lambda r:r[0])
+          ok=sum(1 for r in rows if r[3] and not r[3].startswith(('PAGE_','NO_')))
           with open(OUT/'manifest.csv','w',newline='',encoding='utf-8-sig') as f:
               wr=csv.writer(f); wr.writerow(['codigo','produto_url','imagem_url','dimensoes']); wr.writerows(rows)
           (OUT/'RESUMO.txt').write_text(f'baixadas={ok} tentadas=62\n',encoding='utf-8')
